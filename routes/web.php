@@ -36,7 +36,7 @@ Route::get('/admin/login', [\App\Http\Controllers\Admin\LoginController::class, 
 Route::post('/admin/login', [\App\Http\Controllers\Admin\LoginController::class, 'login'])
     ->name('admin.login');
 
-    
+
     Route::post('/admin/logout', [\App\Http\Controllers\Admin\LoginController::class, 'logout'])
     ->name('admin.logout');
 //Route::get('admin/login', 'Admin\LoginController@showLoginForm')->name('admin.login');
@@ -50,7 +50,9 @@ Route::name('admin.')->prefix('admin')->middleware(['auth:admin','role:SuperAdmi
     Route::get('/home', [\App\Http\Controllers\Admin\HomeController::class,'index'])->name('home');
      Route::get('dash',[\App\Http\Controllers\Admin\UserController::class, 'dash'])->name('dash');
     Route::get('env_mis', [\App\Http\Controllers\Admin\UserController::class, 'env_mis'])->name('env_mis');
-    // Company List 
+    // Company List
+
+
 
     Route::get('user', [\App\Http\Controllers\Admin\UserController::class, 'user_index'])->name('user.index');
     Route::get('user/add', [\App\Http\Controllers\Admin\UserController::class, 'adduser'])->name('adduser');
@@ -102,7 +104,7 @@ Route::name('admin.')->prefix('admin')->middleware(['auth:admin','role:SuperAdmi
     Route::post('retail/existsubmit', 'Admin\UserController@retail_existsubmit')->name('retail.existsubmit');
     Route::get('retail/exist_edit/{id}', 'Admin\UserController@retail_existuser_edit')->name('retail.existuser_edit');
     Route::post('retail/existupdate', 'Admin\UserController@retail_existupdate')->name('retail.existupdate');
-    
+
     Route::get('company_list', 'Admin\ListController@index')->name('user.company_list');
     Route::get('company/view/{com_id}/{fy_id}', 'Admin\ListController@view')->name('user.company_view');
     Route::get('/company_data_view/{head_id}/{fy_id}/{com_id}', 'Admin\ListController@getSubQuesData_view')->name('companyData_view');
@@ -112,7 +114,7 @@ Route::name('admin.')->prefix('admin')->middleware(['auth:admin','role:SuperAdmi
 });
 
 
-// Company 
+// Company
 //Auth::routes(['register' => false]);
 
 
@@ -155,7 +157,7 @@ Route::name('admin.')->prefix('admin')->middleware(['auth:admin','role:SuperAdmi
     Route::post('governance/store', 'User\GovernanceController@store')->name('governance');
     Route::get('/governance/edit/{gov_mast_id}', 'User\GovernanceController@edit')->name('governance.edit');
     Route::post('/governance/update', 'User\GovernanceController@update')->name('governance.update');
-    
+
     Route::resource('physical', 'User\PhysicalController', ['except' => 'create','update']);
     Route::get('/physical/create/{fy_id}', 'User\PhysicalController@create')->name('physical.create');
     Route::post('physical/store', 'User\PhysicalController@store')->name('physical');
