@@ -1,38 +1,37 @@
-@extends('layouts.user.dashboard-master')
-@section('title')
-    Financial Year
-@endsection
-@push('styles')
-    <link href="{{ asset('css/app/application.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/app/progress.css') }}" rel="stylesheet">
-    <style>
-        input[type="file"] {
-            padding: 1px;
-        }
-    </style>
-@endpush
-@section('content')
-    @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
-        </div>
-    @endif
-    @if (count($errors) > 0)
-        <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.
-            <br>
-            <br>
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-    {{-- ContentStarts --}}
+@extends('layouts.user_vertical', ['title' => 'ESG PRAKRIT'])
 
-    <section class="admin-dashboard admin-dashboard-info">
-        <div class="container">
+@section('css')
+    @vite(['node_modules/sweetalert2/dist/sweetalert2.min.css'])
+@endsection
+
+@section('content')
+    <!-- Start Content-->
+    <div class="container-fluid">
+ 
+
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+        <div class="alert alert-danger alert-dismissible bg-danger text-white border-0 fade show" role="alert">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                           {{ $error }}
+        </div>
+        @endforeach
+
+    @endif
+
+  @if(session('success'))
+   
+<div class="alert alert-success alert-dismissible bg-danger text-white border-0 fade show" role="alert">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+       {{ session('success') }}
+    </div>
+    @elseif(session('error'))
+        <div class="alert alert-danger alert-dismissible bg-danger text-white border-0 fade show" role="alert">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+           {{ session('error') }}
+        </div>
+    @endif
+    
 
             <div class="row align-items-center">
             {{--
@@ -57,7 +56,7 @@
 
                         <div class="col-md-4">
                             <div class="dashboard-info">
-                                <img class="img-responsive img-rounded" src="../assets/images/dashboard-img/thematic.jpg"
+                                <img class="img-responsive img-rounded" src="../images/dashboard-img/thematic.jpg"
                                     alt="700x300">
                                 <div class="dashboard-box-info">
                                     <a href="{{ route('user.thematic') }}" class="btn dashboard-btn">Thematic </a>
@@ -68,7 +67,7 @@
 
                         <div class="col-md-4">
                             <div class="dashboard-info">
-                                <img class="img-responsive img-rounded" src="../assets/images/dashboard-img/risk.jpg"
+                                <img class="img-responsive img-rounded" src="../images/dashboard-img/risk.jpg"
                                     alt="700x300">
                                 <div class="dashboard-box-info">
                                     <a href="{{ route('user.risk') }}" class="btn dashboard-btn">Risk</a>
@@ -78,7 +77,7 @@
 
                         <div class="col-md-4">
                             <div class="dashboard-info">
-                                <img class="img-responsive img-rounded" src="../assets/images/dashboard-img/opportunity.jpg"
+                                <img class="img-responsive img-rounded" src="../images/dashboard-img/opportunity.jpg"
                                     alt="700x300">
                                 <div class="dashboard-box-info">
                                     <a href="#" class="btn dashboard-btn">Opportunity</a>
@@ -89,16 +88,9 @@
                 </div>
             </div>
             <br>
-            <div class="row pb-2 mt-2 d-flex align-items-center">
-                <div class="col-md-2">
-                    <a href="{{ route('user.environment') }}"
-                    class="btn btn-warning btn-sm"> <i
-                        class="fas fa-arrow-left"></i> Back </a>
-                </div>
-            </div>
+    
         </div>
-    </section>
-@endsection
+    @endsection
 @push('scripts')
     {!! JsValidator::formRequest('App\Http\Requests\User\QuestionaireRequest', '#questions') !!}
     @include('partials.js.prevent_multiple_submit')

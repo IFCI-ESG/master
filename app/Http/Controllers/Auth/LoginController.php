@@ -23,7 +23,7 @@ class LoginController extends Controller
 
     public function store(Request $request)
     {
-
+        // dd($request);
         $key = hex2bin("0123456789abcdef0123456789abcdef");
         $iv = hex2bin("abcdef9876543210abcdef9876543210");
 
@@ -39,7 +39,11 @@ class LoginController extends Controller
         ]);
 
         $credentials = $request->only('unique_login_id', 'password');
-        if (Auth::guard('web')->attempt($credentials)) {
+
+         // Check if the "Remember Me" option is selected
+        $remember = $request->has('remember') ? true : false;
+
+        if (Auth::guard('web')->attempt($credentials,$remember)) {
              return redirect()->route('home');
         }
 

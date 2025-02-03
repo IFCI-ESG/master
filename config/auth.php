@@ -41,8 +41,8 @@ return [
             'provider' => 'users',
         ],
          'admin' => [
-        'driver' => 'session',
-        'provider' => 'admins',
+            'driver' => 'session',
+            'provider' => 'admins',
         ],
     ],
 
@@ -106,7 +106,7 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
-          'users' => [
+          'admins' => [
             'provider' => 'admins',
             'table' => env('AUTH_PASSWORD_RESET_TOKEN_TABLE', 'password_reset_tokens'),
             'expire' => 60,

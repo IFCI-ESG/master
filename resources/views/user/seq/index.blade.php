@@ -1,36 +1,37 @@
-@extends('layouts.user.dashboard-master')
-@section('title')
-Financial Year
-@endsection
-@push('styles')
-<link href="{{ asset('css/app/application.css') }}" rel="stylesheet">
-<link href="{{ asset('css/app/progress.css') }}" rel="stylesheet">
-<style>
-    input[type="file"] {
-        padding: 1px;
-    }
-</style>
-@endpush
-@section('content')
-@if ($message = Session::get('success'))
-<div class="alert alert-success">
-    <p>{{ $message }}</p>
-</div>
-@endif
-@if (count($errors) > 0)
-<div class="alert alert-danger">
-    <strong>Whoops!</strong> There were some problems with your input.
-    <br>
-    <br>
-    <ul>
-        @foreach ($errors->all() as $error)
-        <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-</div>
-@endif
-{{-- ContentStarts --}}
+@extends('layouts.user_vertical', ['title' => 'ESG PRAKRIT'])
 
+@section('css')
+    @vite(['node_modules/sweetalert2/dist/sweetalert2.min.css'])
+@endsection
+
+@section('content')
+    <!-- Start Content-->
+    <div class="container-fluid">
+ 
+
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+        <div class="alert alert-danger alert-dismissible bg-danger text-white border-0 fade show" role="alert">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                           {{ $error }}
+        </div>
+        @endforeach
+
+    @endif
+
+  @if(session('success'))
+   
+<div class="alert alert-success alert-dismissible bg-danger text-white border-0 fade show" role="alert">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+       {{ session('success') }}
+    </div>
+    @elseif(session('error'))
+        <div class="alert alert-danger alert-dismissible bg-danger text-white border-0 fade show" role="alert">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+           {{ session('error') }}
+        </div>
+    @endif
+    
 <div class="row" >
     <div class="col-lg-8 offset-md-2">
         <div class="card card-success card-outline mt-5 ml-2" style="box-shadow: 0 4px 10px 0 rgba(182, 233, 152, 0.474), 0 5px 20px 0 rgba(182, 233, 152, 0.474);">

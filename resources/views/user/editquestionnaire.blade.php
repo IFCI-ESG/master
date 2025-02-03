@@ -1,7 +1,10 @@
-@extends('layouts.user.dashboard-master')
-@section('title')
-Questionnaire Details
-@endsection
+@extends('layouts.user_vertical', ['title' => 'ESG PRAKRIT'])
+
+@section('content')
+    <!-- Start Content-->
+    <div class="container-fluid">
+
+        @include('layouts.shared.page-title' , ['title' => 'Dashboard','subtitle' => 'Dashboards'])
 @push('styles')
     <link href="{{ asset('css/app/application.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app/progress.css') }}" rel="stylesheet">
@@ -11,9 +14,23 @@ Questionnaire Details
         }
     </style>
 @endpush
-@section('content')
-    <div class="container  py-4 px-2 col-lg-12">
-        <div class="row justify-content-center">
+    @if ($message = Session::get('success'))
+        <div class="alert alert-success">
+            <p>{{ $message }}</p>
+        </div>
+    @endif
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <strong>Whoops!</strong> There were some problems with your input.
+            <br>
+            <br>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif        <div class="row justify-content-center">
             <div class="col-md-12">
                 <form action="{{ route('user.questionnaire.store') }}" id="bankDetails_create" role="form" method="post"
                     class='prevent_multiple_submit' files=true enctype='multipart/form-data' accept-charset="utf-8">

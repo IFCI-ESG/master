@@ -1,27 +1,34 @@
-@extends('layouts.user.dashboard-master')
-@section('title')
-    Add Questionnaire
+@extends('layouts.user_vertical', ['title' => 'ESG PRAKRIT'])
+
+@section('css')
+    @vite(['node_modules/sweetalert2/dist/sweetalert2.min.css'])
 @endsection
-@push('styles')
-    {{-- <link href="{{ asset('css/app/application.css') }}" rel="stylesheet"> --}}
-    <link href="{{ asset('css/app/progress.css') }}" rel="stylesheet">
-@endpush
+
 @section('content')
-    @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
+    <!-- Start Content-->
+    <div class="container-fluid">
+ 
+
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+        <div class="alert alert-danger alert-dismissible bg-danger text-white border-0 fade show" role="alert">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                           {{ $error }}
         </div>
+        @endforeach
+
     @endif
-    @if (count($errors) > 0)
-        <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.
-            <br>
-            <br>
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
+
+  @if(session('success'))
+   
+<div class="alert alert-success alert-dismissible bg-danger text-white border-0 fade show" role="alert">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+       {{ session('success') }}
+    </div>
+    @elseif(session('error'))
+        <div class="alert alert-danger alert-dismissible bg-danger text-white border-0 fade show" role="alert">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+           {{ session('error') }}
         </div>
     @endif
     <div class="row" >
@@ -68,13 +75,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row pb-2 mt-2 d-flex align-items-center">
-                <div class="col-md-2 ml-4">
-                    <a href="{{ route('user.climate') }}"
-                    class="btn btn-warning btn-sm float-left"> <i
-                        class="fas fa-arrow-left"></i> Back </a>
-                </div>
-            </div>
+   
         </div>
     </div>
 @endsection

@@ -12,8 +12,15 @@
     <div class="auth-fluid">
 
 
-        <!-- Auth fluid right content -->
-        
+          <!-- Auth fluid right content -->
+          <div class="auth-fluid-right " style="background-color: rgb(1 1 1 / 0%);">
+            <div class="auth-user-testimonial" style="margin: 10vh;">
+
+                <h5 class="text-white">
+                    <!-- -  ESG-PRAKRIT Admin User -->
+                </h5>
+            </div> <!-- end auth-user-testimonial-->
+        </div>
         <!-- end Auth fluid right content -->
 
         <!--Auth fluid left content -->
@@ -74,17 +81,13 @@
 
                         </div>
                         <div class="mb-3">
-                            <a href="" class="text-muted float-end"><small>Forgot password?</small></a>
+                            <a href="{{ route('password.request') }}" class="text-muted float-end"><small>Forgot password?</small></a>
                             <label for="password" class="form-label">Password</label>
                             <div class="input-group input-group-merge">
- 
+
                      <input id="password" type="password"
                 class="form-control @error('password') is-invalid @enderror" name="password"
                 placeholder="" required autocomplete="off">
-
-
-
-
 
 
 
@@ -105,7 +108,7 @@
             NEVER part with them. IFCI will never ask for this information
              ALWAYS visit the portal directly instead of clicking on the links provided in emails or third party websites
             NEVER respond to any popup,email, SMS or phone call, no matter how appealing or official looking, seeking your personal information such as username, password(s), mobile number, etc. Such communications are sent or created by fraudsters to trick you into parting with your credentials'>
-                      
+
              Help
         </span>
                             </div>

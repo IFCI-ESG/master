@@ -1,7 +1,10 @@
-@extends('layouts.user.dashboard-master')
-@section('title')
-    Financial Year
-@endsection
+@extends('layouts.user_vertical', ['title' => 'ESG PRAKRIT'])
+
+@section('content')
+    <!-- Start Content-->
+    <div class="container-fluid">
+
+        @include('layouts.shared.page-title' , ['title' => 'Dashboard','subtitle' => 'Dashboards'])
 @push('styles')
     <link href="{{ asset('css/app/application.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app/progress.css') }}" rel="stylesheet">
@@ -11,7 +14,6 @@
         }
     </style>
 @endpush
-@section('content')
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
             <p>{{ $message }}</p>
@@ -29,8 +31,6 @@
             </ul>
         </div>
     @endif
-    {{-- ContentStarts --}}
-
     <div class="row" >
         <div class="col-lg-8 offset-md-2">
             <div class="card card-success card-outline mt-5 ml-2" style="box-shadow: 0 4px 10px 0 rgba(182, 233, 152, 0.474), 0 5px 20px 0 rgba(182, 233, 152, 0.474);">
@@ -93,13 +93,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row pb-2 mt-2 d-flex align-items-center">
-                <div class="col-md-2 ml-4">
-                    <a href="{{ route('user.bank') }}"
-                    class="btn btn-warning btn-sm float-left"> <i
-                        class="fas fa-arrow-left"></i> Back </a>
-                </div>
-            </div>
+            
         </div>
     </div>
 @endsection

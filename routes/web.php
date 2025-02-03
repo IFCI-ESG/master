@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 // use App\Http\Controllers\Admin\UserController;
 
 
-// require __DIR__ . '/auth.php';
+require __DIR__ . '/auth.php';
 
 // // Route::get('', [RoutingController::class, 'index'])->name('landing');
 
@@ -51,8 +51,6 @@ Route::name('admin.')->prefix('admin')->middleware(['auth:admin','role:SuperAdmi
      Route::get('dash',[\App\Http\Controllers\Admin\UserController::class, 'dash'])->name('dash');
     Route::get('env_mis', [\App\Http\Controllers\Admin\UserController::class, 'env_mis'])->name('env_mis');
     // Company List
-
-
 
     Route::get('user', [\App\Http\Controllers\Admin\UserController::class, 'user_index'])->name('user.index');
     Route::get('user/add', [\App\Http\Controllers\Admin\UserController::class, 'adduser'])->name('adduser');

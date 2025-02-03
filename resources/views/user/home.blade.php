@@ -4,7 +4,7 @@
     <!-- Start Content-->
     <div class="container-fluid">
 
-        @include('layouts.shared.page-title' , ['title' => 'Dashboard','subtitle' => 'Dashboards'])
+
 
 <style>
     .shadow-div {
@@ -150,6 +150,4 @@
 
 @endsection
 
-@section('script')
-    @vite(['resources/js/pages/dashboard-4.init.js'])
-@endsection
+
