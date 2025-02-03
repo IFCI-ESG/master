@@ -2,30 +2,102 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Models\BankDetails;
-use App\Models\User;
 use App\Models\AdminUser;
-use DB;
+use App\Models\User;
 use Auth;
-use Carbon\Carbon;
-use Mail;
-use Hash;
+use DB;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Validator;
 
 class BankController extends Controller
 {
 
+    public function updateAccount(Request $request)
+{
+    try {
+        $request->validate([
+            'email' => 'required|email|unique:admin_users,email,' . auth()->user()->id,
+        ]);
+
+        if ($request->has('reset_password')) {
+            $request->validate([
+                'new_password'     => 'required|min:8',
+                'confirm_password' => 'required|same:new_password',
+                'otp'              => 'required|numeric',
+            ]);
+
+            $validOtp = '987654';
+
+            if ($request->otp != $validOtp) {
+                return redirect()->back()->with('error', 'Invalid OTP!');
+            }
+        }
+
+        $user = AdminUser::find(auth()->user()->id);
+
+        if (! $user) {
+            return redirect()->back()->with('error', 'User not found!');
+        }
+
+        $user->email = $request->email;
+
+        if ($request->has('reset_password')) {
+            $user->password = Hash::make($request->new_password);
+            $user->password_changed = 1; 
+        }
+
+        $user->save();
+
+        return redirect()->back()->with([
+            'success' => 'Account updated successfully!',
+            'password_changed' => 1 
+        ]);
+    } catch (\Exception $e) {
+        return redirect()->back()->with('error', 'Something went wrong!');
+    }
+}
+    public function activate($id)
+    {
+
+        $id = decrypt($id);
+
+        $user = AdminUser::find($id);
+
+        if ($user) {
+            $user->isactive = 'Y';
+            $user->save();
+
+            return redirect()->back()->with('success', 'Bank activated successfully.');
+        }
+
+        return redirect()->back()->with('error', 'User not found.');
+    }
+
+    public function deactivate($id)
+    {
+
+        $id = decrypt($id);
+
+        $user = AdminUser::find($id);
+
+        if ($user) {
+            $user->isactive = 'N';
+            $user->save();
+
+            return redirect()->back()->with('success', 'Bank deactivated successfully.');
+        }
+
+        return redirect()->back()->with('error', 'User not found.');
+    }
     public function index()
     {
-        // $bank_part = DB::table('bank_particulars')->get();
-        $user = Auth::user();
+
+        $user         = Auth::user();
         $bank_details = DB::table('admin_users')
             ->where('created_by', $user->id)
             ->orderby('id')->get();
 
-
-        // dd($bank_details);
         return view('admin.bank.index', compact('bank_details'));
 
     }
@@ -38,19 +110,20 @@ class BankController extends Controller
 
     }
 
-
-
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'bank_name' => 'required|string|regex:/^[a-zA-Z\s]+$/',
-            'designation' => 'required|string|regex:/^[a-zA-Z\s]+$/',
-            'pan' => 'required|string',
+            'bank_name'      => 'required|string|regex:/^[a-zA-Z\s]+$/',
+            'designation'    => 'required|string|regex:/^[a-zA-Z\s]+$/',
+            'pan'            => 'required|string',
+            'license_key'    => 'required|string',
+            'valid_from'     => 'required|date',
+            'valid_to'       => 'required|date|after_or_equal:valid_from',
             'contact_person' => 'required|string|regex:/^[a-zA-Z\s]+$/',
-            'email' => 'required|email',
-            'mobile' => 'required|digits:10|regex:/^[0-9]{10}$/',
-            'services' => 'nullable|array',
-            'services.*' => 'exists:services_master,id',
+            'email'          => 'required|email',
+            'mobile'         => 'required|digits:10|regex:/^[0-9]{10}$/',
+            'services'       => 'nullable|array',
+            'services.*'     => 'exists:services_master,id',
         ]);
 
         if ($validator->fails()) {
@@ -80,18 +153,21 @@ class BankController extends Controller
         }
         $newuser = new AdminUser;
         // $randomString = $this->generateRandomString(5);
-        $newuser->name = $request->bank_name;
-        $newuser->pan = $request->pan;
-        $newuser->email = $request->email;
+        $newuser->name        = $request->bank_name;
+        $newuser->pan         = $request->pan;
+        $newuser->license_key = $request->license_key;
+        $newuser->valid_from  = $request->valid_from;
+        $newuser->valid_to    = $request->valid_to;
+        $newuser->email       = $request->email;
         // $newuser->password = Hash::make($randomString);
         //$newuser->password = '$2y$10$vTj1GhEjFcL0duMu1AqmGebo48zWZoxIuG8ThKXNfEDw7ltrUobTC';    // India@1234
-        $newuser->mobile = $request->mobile;
-        $newuser->altr_mobile = $request->altr_mobile;
-        $newuser->designation = $request->designation;
+        $newuser->mobile         = $request->mobile;
+        $newuser->altr_mobile    = $request->altr_mobile;
+        $newuser->designation    = $request->designation;
         $newuser->contact_person = $request->contact_person;
-        $newuser->services = json_encode($request->services);
-        $newuser->status = 'D';
-        $newuser->created_by = $user->id;
+        $newuser->services       = json_encode($request->services);
+        $newuser->status         = 'D';
+        $newuser->created_by     = $user->id;
         DB::transaction(function () use ($newuser) {
             $newuser->save();
         });
@@ -106,13 +182,11 @@ class BankController extends Controller
         // }
     }
 
-
-
     private function generateRandomString($length = 5)
     {
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()';
+        $characters       = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()';
         $charactersLength = strlen($characters);
-        $randomString = '';
+        $randomString     = '';
 
         for ($i = 0; $i < $length; $i++) {
             $randomString .= $characters[rand(0, $charactersLength - 1)];
@@ -123,12 +197,22 @@ class BankController extends Controller
 
     public function edit($id)
     {
-        $id = decrypt($id);
-        $services = DB::table('services_master')->get();
-        $bank_details = AdminUser::find($id);
+        $id             = decrypt($id);
+        $services       = DB::table('services_master')->get();
+        $bank_details   = AdminUser::find($id);
         $storedServices = json_decode($bank_details->services, true);
         // dd($bank_details,$services);
         return view('admin.bank.editbank', compact('bank_details', 'storedServices', 'services'));
+
+    }
+    public function view($id)
+    {
+        $id             = decrypt($id);
+        $services       = DB::table('services_master')->get();
+        $bank_details   = AdminUser::find($id);
+        $storedServices = json_decode($bank_details->services, true);
+        // dd($bank_details,$services);
+        return view('admin.bank.viewbank', compact('bank_details', 'storedServices', 'services'));
 
     }
 
@@ -138,15 +222,18 @@ class BankController extends Controller
         // try{
 
         DB::transaction(function () use ($request) {
-            $user = AdminUser::find($request->user_id);
-            $user->name = $request->bank_name;
-            $user->pan = $request->pan;
-            $user->email = $request->email;
+            $user                 = AdminUser::find($request->user_id);
+            $user->name           = $request->bank_name;
+            $user->pan            = $request->pan;
+            $user->license_key    = $request->license_key;
+            $user->valid_from     = $request->valid_from;
+            $user->valid_to       = $request->valid_to;
+            $user->email          = $request->email;
             $user->contact_person = $request->contact_person;
-            $user->designation = $request->designation;
-            $user->mobile = $request->mobile;
-            $user->altr_mobile = $request->altr_mobile;
-            $user->services = json_encode($request->input('services', []));
+            $user->designation    = $request->designation;
+            $user->mobile         = $request->mobile;
+            $user->altr_mobile    = $request->altr_mobile;
+            $user->services       = json_encode($request->input('services', []));
             // $purpose = $request->input('purpose', []);
             // $user->purpose = implode(',', $purpose);
             $user->save();
@@ -174,18 +261,18 @@ class BankController extends Controller
         DB::transaction(function () use ($request) {
             $randomString = $this->generateRandomString(5);
 
-            $user = AdminUser::find($request->user_id);
+            $user           = AdminUser::find($request->user_id);
             $user->isactive = 'Y';
-            $user->status = 'S';
-            // $user->password=Hash::make($randomString);
-            $user->password = '$2y$10$vTj1GhEjFcL0duMu1AqmGebo48zWZoxIuG8ThKXNfEDw7ltrUobTC';    // India@1234
+            $user->status   = 'S';
+            $user->password_changed   = 0;  //First Login
+                                                                                              // $user->password=Hash::make($randomString);
+            $user->password = '$2y$10$vTj1GhEjFcL0duMu1AqmGebo48zWZoxIuG8ThKXNfEDw7ltrUobTC'; // India@1234
 
             $user->save();
 
-            $data_role1 = array('role_id' => 2, 'model_type' => 'App\User', 'model_id' => $user->id);
-            $data_role2 = array('role_id' => 3, 'model_type' => 'App\User', 'model_id' => $user->id);
+            $data_role1 = ['role_id' => 2, 'model_type' => 'App\Models\AdminUser', 'model_id' => $user->id];
+            $data_role2 = ['role_id' => 3, 'model_type' => 'App\Models\AdminUser', 'model_id' => $user->id];
             DB::table('model_has_roles')->insert([$data_role1, $data_role2]);
-
 
             // $esd_det = array('bank_user_id' =>  $user->id, 'esd' => 'ESG/'.$user->id, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now());
             // DB::table('bank_esd_details')->insert($esd_det);
@@ -216,7 +303,7 @@ class BankController extends Controller
         // }
 
     }
-   
+
     public function com_list($bank_id)
     {
         $bank_id = decrypt($bank_id);
@@ -230,7 +317,5 @@ class BankController extends Controller
         return view('admin.bank.company_list', compact('comp'));
 
     }
-
-
 
 }

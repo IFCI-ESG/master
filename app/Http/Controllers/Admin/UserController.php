@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Response;
+
 use App\Models\ModelHasRoles;
 use App\Models\QuestionnaireMast;
 use App\Models\BankFinancialDetails;
@@ -25,8 +26,9 @@ use Mail;
 
 class UserController extends Controller
 {
-
-      public function index()
+    
+    
+    public function index()
     {
         return view('admin.home');
     }

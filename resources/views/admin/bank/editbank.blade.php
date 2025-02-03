@@ -61,23 +61,60 @@
                                                 class="form-control form-control-sm text-right" style="width:50%"
                                                 oninput="restrictBankNameInput(event)" placeholder="Enter Bank Name"
                                                 required />
+                                            <span
+                                                style="color: #888; font-size: 0.8rem; display: block; margin-top: 5px;">(Bank
+                                                Name - Special Characters And Integers Are Not Allowed)</span>
                                         </td>
                                     </tr>
                                     <tr>
-                                    <th class="text-center" style="font-size: 0.9rem"> 2. </th>
-                                    <th style="font-size: 0.9rem">PAN <span style="color: red;">*</span></th>
-                                     <td>
-                                     <input type="text" id="pan" name="pan" value="{{$bank_details->pan}}"
-                                     class="form-control form-control-sm text-right" style="width:50%; background-color: #f0f0f0; color: #333;"
-                                     oninput="restrictPANInput(event)" onblur="validatePAN()"
-                                     placeholder="ABCDE1234F" required />
-                                  <div id="pan-error-message"
-                                  style="color: red; display: none; font-size: 0.9rem;"></div>
-                                   <!-- <span style="color: #888; font-size: 0.8rem; display: block; margin-top: 5px;">(PAN Number - Cannot be changed)</span> -->
-                                    </td>
+                                        <th class="text-center" style="font-size: 0.9rem"> 2. </th>
+                                        <th style="font-size: 0.9rem">
+                                            PAN <span style="color: red;">*</span>
+                                        </th>
+                                        <td>
+                                            <input type="text" id="pan" name="pan" value="{{$bank_details->pan}}"
+                                                class="form-control form-control-sm text-right" style="width:50%"
+                                                oninput="restrictPANInput(event)" onblur="validatePAN()"
+                                                placeholder="ABCDE1234F" required />
+                                            <div id="pan-error-message"
+                                                style="color: red; display: none; font-size: 0.9rem;"></div>
+                                        </td>
                                     </tr>
-                                        <tr>
+                                    <tr>
                                         <th class="text-center" style="font-size: 0.9rem"> 3. </th>
+                                        <th style="font-size: 0.9rem">
+                                            License Key <span style="color: red;">*</span>
+                                        </th>
+                                        <td>
+                                            <input type="text" id="license_key" name="license_key" value="{{$bank_details->license_key}}"
+                                                class="form-control form-control-sm text-right" style="width:50%"
+                                                required />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" style="font-size: 0.9rem"> 4. </th>
+                                        <th style="font-size: 0.9rem">
+                                            Valid From <span style="color: red;">*</span>
+                                        </th>
+                                        <td>
+                                            <input type="date" id="valid_from" name="valid_from" value="{{$bank_details->valid_from}}"
+                                                class="form-control form-control-sm text-right" style="width:50%"
+                                                required onchange="setMinValidToDate()" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" style="font-size: 0.9rem"> 5. </th>
+                                        <th style="font-size: 0.9rem">
+                                            Valid To <span style="color: red;">*</span>
+                                        </th>
+                                        <td>
+                                            <input type="date" id="valid_to" name="valid_to" value="{{$bank_details->valid_to}}"
+                                                class="form-control form-control-sm text-right" style="width:50%"
+                                                required />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" style="font-size: 0.9rem"> 6. </th>
                                         <th style="font-size: 0.9rem"> Email <span style="color: red;">*</span></th>
                                         <td>
                                             <input type="email" id="email" name="email" value="{{$bank_details->email}}"
@@ -88,8 +125,8 @@
                                                 style="color: red; display: none; font-size: 0.9rem;"></div>
                                         </td>
                                     </tr>
-                                        <tr>
-                                        <th class="text-center" style="font-size: 0.9rem"> 4. </th>
+                                    <tr>
+                                        <th class="text-center" style="font-size: 0.9rem"> 7. </th>
                                         <th style="font-size: 0.9rem"> Contact Person <span style="color: red;">*</span>
                                         </th>
                                         <td>
@@ -97,10 +134,13 @@
                                                 class="form-control form-control-sm text-right" style="width:50%"
                                                 oninput="restrictContactPersonInput(event)"
                                                 placeholder="Enter Contact Person" required />
+                                            <span
+                                                style="color: #888; font-size: 0.8rem; display: block; margin-top: 5px;">(Contact
+                                                Person - Special Characters And Integers Are Not Allowed)</span>
                                         </td>
                                     </tr>
-                                        <tr>
-                                        <th class="text-center" style="font-size: 0.9rem"> 5. </th>
+                                    <tr>
+                                        <th class="text-center" style="font-size: 0.9rem"> 8. </th>
                                         <th style="font-size: 0.9rem"> Designation <span style="color: red;">*</span>
                                         </th>
                                         <td>
@@ -108,50 +148,59 @@
                                                 class="form-control form-control-sm text-right" style="width:50%"
                                                 oninput="restrictDesignationInput(event)"
                                                 placeholder="Enter Designation" />
+                                            <span
+                                                style="color: #888; font-size: 0.8rem; display: block; margin-top: 5px;">(Designation
+                                                - Special Characters And Integers Are Not Allowed)</span>
                                         </td>
                                     </tr>
-                                        <tr>
-                                        <th class="text-center" style="font-size: 0.9rem"> 6. </th>
+                                    <tr>
+                                        <th class="text-center" style="font-size: 0.9rem"> 9. </th>
                                         <th style="font-size: 0.9rem"> Mobile <span style="color: red;">*</span> </th>
                                         <td>
                                             <input type="tel" id="mobile" name="mobile" value="{{$bank_details->mobile}}"
                                                 class="form-control form-control-sm text-right" style="width:50%"
                                                 oninput="restrictMobileInput(event)"
                                                 placeholder="Enter 10 digit mobile number" required />
+                                            <span
+                                                style="color: #888; font-size: 0.8rem; display: block; margin-top: 5px;">(Please
+                                                enter a valid 10-digit Mobile Number)</span>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="text-center" style="font-size: 0.9rem"> 7. </th>
-                                        <th style="font-size: 0.9rem"> Alternate Mobile </th>
+                                        <th class="text-center" style="font-size: 0.9rem"> 10. </th>
+                                        <th style="font-size: 0.9rem"> Alternate Mobile <span
+                                                style="color: red;">*</span></th>
                                         <td>
                                             <input type="number" id="altr_mobile" name="altr_mobile" value="{{$bank_details->altr_mobile}}"
                                                 class="form-control form-control-sm text-right" style="width:50%"
                                                 oninput="restrictAlternateMobileInput(event)"
-                                                placeholder="Enter Alternate Mobile" />
+                                                placeholder="Enter Alternate Mobile" required />
+                                            <span
+                                                style="color: #888; font-size: 0.8rem; display: block; margin-top: 5px;">(Please
+                                                enter a valid 10-digit Alternate Mobile Number)</span>
+
                                         </td>
                                     </tr>
                                     <tr>
-                                            <th class="text-center" style="font-size: 0.9rem"> 8. </th>
-                                            <th style="font-size: 0.9rem"> Purpose <span style="color: red;">*</span></th>
-                                            <td colspan="2">
-                                                <table>
-                                                    <tbody>
-                                                        @foreach ($services as $key => $serve)
-                                                            <tr>
-                                                                <td style="width: 50%;">
-                                                                    <label for="environment" style="font-size: 0.9rem">{{$serve->services}} </label>&nbsp;&nbsp;
-                                                                </td>
-                                                                <td class="text-center" style="width: 50%;">
-                                                                    <input type="checkbox" class="services margin-right" id="service_{{ $serve->id }}" name="services[]" value="{{$serve->id}}" {{ in_array($serve->id, $storedServices) ? 'checked' : '' }}>
-                                                                </td>
-                                                            </tr>
-                                                        @endforeach
-                                                    </tbody>
-                                                </table>
-                                              
-                                            </td>
-                                        </tr>
-
+                                        <th class="text-center" style="font-size: 0.9rem">11.</th>
+                                        <th style="font-size: 0.9rem">Services <span style="color: red;">*</span></th>
+                                        <td colspan="2">
+                                            <table>
+                                                <tbody>
+                                                    @foreach ($services as $key => $serve)
+                                                        <tr>
+                                                            <td style="width: 50%;">
+                                                                <label for="environment" style="font-size: 0.9rem">{{$serve->services}} </label>&nbsp;&nbsp;
+                                                            </td>
+                                                            <td class="text-center" style="width: 50%;">
+                                                                <input type="checkbox" class="services margin-right" id="service_{{ $serve->id }}" name="services[]" value="{{$serve->id}}" {{ in_array($serve->id, $storedServices) ? 'checked' : '' }} >
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -166,74 +215,7 @@
                             </button>
                         </div>
                 </form>
-                <script>
-    function showError(inputField, message) {
-        var errorMessage = document.getElementById(inputField + "-error-message");
-        errorMessage.style.display = "block";
-        errorMessage.textContent = message;
-    }
-    function hideError(inputField) {
-        var errorMessage = document.getElementById(inputField + "-error-message");
-        errorMessage.style.display = "none";
-    }
-    function validatePAN() {
-        var panNumber = document.getElementById("pan").value;
-        var regex = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
 
-        if (!regex.test(panNumber)) {
-            showError("pan", "Please enter a valid PAN number (e.g., ABCDE1234F).");
-        } else {
-            hideError("pan");
-        }
-    }
-    function validateEmail() {
-        var email = document.getElementById("email").value;
-        var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-        if (!regex.test(email)) {
-            showError("email", "Please enter a valid email address (e.g., example@domain.com).");
-        } else {
-            hideError("email");
-        }
-    }
-    function restrictEmailInput(e) {
-        var regex = /^[a-zA-Z0-9._%+-@]*$/;
-        var inputValue = e.target.value;
-        if (!regex.test(inputValue)) {
-            e.target.value = inputValue.replace(/[^a-zA-Z0-9._%+-@]/g, '');
-        }
-    }
-
-    function restrictBankNameInput(e) {
-        var regex = /^[A-Za-z\s]*$/;
-        var inputValue = e.target.value;
-        if (!regex.test(inputValue)) {
-            e.target.value = inputValue.replace(/[^A-Za-z\s]/g, '');
-        }
-    }
-    function restrictContactPersonInput(e) {
-        var regex = /^[A-Za-z\s]*$/;
-        var inputValue = e.target.value;
-        if (!regex.test(inputValue)) {
-            e.target.value = inputValue.replace(/[^A-Za-z\s]/g, '');
-        }
-    }
-    function restrictDesignationInput(e) {
-        var regex = /^[A-Za-z\s]*$/;
-        var inputValue = e.target.value;
-        if (!regex.test(inputValue)) {
-            e.target.value = inputValue.replace(/[^A-Za-z\s]/g, '');
-        }
-    }
-    function restrictMobileInput(e) {
-        var regex = /^[0-9]*$/;
-        var inputValue = e.target.value;
-        if (!regex.test(inputValue)) {
-            e.target.value = inputValue.replace(/[^0-9]/g, '');
-        }
-    }
-
-</script>
                     <div class="col-md-2 offset-md-0">
                         <form action="{{ route('admin.new_admin.submit') }}" id="final_submit" role="form" method="post"
                             class='fin_prevent_multiple_submit' files=true enctype='multipart/form-data' accept-charset="utf-8">
@@ -252,30 +234,7 @@
 @endsection
 @push('scripts')
     {!! JsValidator::formRequest('App\Http\Requests\Admin\BankRequest', '#bankDetails_edit') !!}
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        // Check for success messages in the session
-        @if(session('success'))
-            Swal.fire({
-                title: 'Success!',
-                text: '{{ session('success') }}',
-                icon: 'success',
-                confirmButtonText: 'OK'
-            });
-        @endif
-
-        @if(session('error'))
-            Swal.fire({
-                title: 'Error!',
-                text: '{{ session('error') }}',
-                icon: 'error',
-                confirmButtonText: 'OK'
-            });
-        @endif
-    </script>
-@endpush
-@push('scripts')
-    {!! JsValidator::formRequest('App\Http\Requests\Admin\BankRequest', '#bankDetails_edit') !!}
+    {{-- @include('partials.js.prevent_multiple_submit') --}}
     <script>
         $(document).ready(function() {
 
@@ -305,7 +264,28 @@
                 setTimeout(function(){$( ".det_msg" ).hide()}, (1000*20));
             });
 
-           
+            // const saveBtn = document.getElementById("save_submit");
+            // const finalBtn = document.getElementById("finalsubmit");
+            // $('.prevent_multiple_submit').on('submit', function() {
+            //     if ($('.msg').length === 0) {
+            //         $(finalBtn).parent().after(
+            //         '<div class="offset-md-4 msg"><span class="text-danger text-sm text-center">Please wait while your request is being processed. &nbsp&nbsp&nbsp<i class="fa fa-spinner fa-spin" style="font-size:24px;color:black"></i></span></div>'
+            //         );
+            //     }
+
+            //     saveBtn.disabled = true;
+            //     finalBtn.disabled = true;
+
+            //     setTimeout(function() {
+            //         saveBtn.disabled = false;
+            //     }, (1000 * 20));
+            //     setTimeout(function() {
+            //         finalBtn.disabled = false;
+            //     }, (1000 * 20));
+            //     setTimeout(function() {
+            //         $(".msg").hide()
+            //     }, (1000 * 20));
+            // });
         });
 
         function validateForm() {

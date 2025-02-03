@@ -63,7 +63,9 @@
                                                 class="form-control form-control-sm text-right" style="width:50%"
                                                 oninput="restrictBankNameInput(event)" placeholder="Enter Bank Name"
                                                 required />
-                                            <span style="color: #888; font-size: 0.8rem; display: block; margin-top: 5px;">(Bank Name - Special Characters And Integers Are Not Allowed)</span>
+                                            <span
+                                                style="color: #888; font-size: 0.8rem; display: block; margin-top: 5px;">(Bank
+                                                Name - Special Characters And Integers Are Not Allowed)</span>
                                         </td>
                                     </tr>
                                     <tr>
@@ -82,6 +84,39 @@
                                     </tr>
                                     <tr>
                                         <th class="text-center" style="font-size: 0.9rem"> 3. </th>
+                                        <th style="font-size: 0.9rem">
+                                            License Key <span style="color: red;">*</span>
+                                        </th>
+                                        <td>
+                                            <input type="text" id="license_key" name="license_key"
+                                                class="form-control form-control-sm text-right" style="width:50%"
+                                                required />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" style="font-size: 0.9rem"> 4. </th>
+                                        <th style="font-size: 0.9rem">
+                                            Valid From <span style="color: red;">*</span>
+                                        </th>
+                                        <td>
+                                            <input type="date" id="valid_from" name="valid_from"
+                                                class="form-control form-control-sm text-right" style="width:50%"
+                                                required onchange="setMinValidToDate()" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" style="font-size: 0.9rem"> 5. </th>
+                                        <th style="font-size: 0.9rem">
+                                            Valid To <span style="color: red;">*</span>
+                                        </th>
+                                        <td>
+                                            <input type="date" id="valid_to" name="valid_to"
+                                                class="form-control form-control-sm text-right" style="width:50%"
+                                                required />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" style="font-size: 0.9rem"> 6. </th>
                                         <th style="font-size: 0.9rem"> Email <span style="color: red;">*</span></th>
                                         <td>
                                             <input type="email" id="email" name="email"
@@ -93,7 +128,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="text-center" style="font-size: 0.9rem"> 4. </th>
+                                        <th class="text-center" style="font-size: 0.9rem"> 7. </th>
                                         <th style="font-size: 0.9rem"> Contact Person <span style="color: red;">*</span>
                                         </th>
                                         <td>
@@ -101,11 +136,13 @@
                                                 class="form-control form-control-sm text-right" style="width:50%"
                                                 oninput="restrictContactPersonInput(event)"
                                                 placeholder="Enter Contact Person" required />
-                                                <span style="color: #888; font-size: 0.8rem; display: block; margin-top: 5px;">(Contact Person - Special Characters And Integers Are Not Allowed)</span>
+                                            <span
+                                                style="color: #888; font-size: 0.8rem; display: block; margin-top: 5px;">(Contact
+                                                Person - Special Characters And Integers Are Not Allowed)</span>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="text-center" style="font-size: 0.9rem"> 5. </th>
+                                        <th class="text-center" style="font-size: 0.9rem"> 8. </th>
                                         <th style="font-size: 0.9rem"> Designation <span style="color: red;">*</span>
                                         </th>
                                         <td>
@@ -113,34 +150,41 @@
                                                 class="form-control form-control-sm text-right" style="width:50%"
                                                 oninput="restrictDesignationInput(event)"
                                                 placeholder="Enter Designation" />
-                                                <span style="color: #888; font-size: 0.8rem; display: block; margin-top: 5px;">(Designation - Special Characters And Integers Are Not Allowed)</span>
+                                            <span
+                                                style="color: #888; font-size: 0.8rem; display: block; margin-top: 5px;">(Designation
+                                                - Special Characters And Integers Are Not Allowed)</span>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="text-center" style="font-size: 0.9rem"> 6. </th>
+                                        <th class="text-center" style="font-size: 0.9rem"> 9. </th>
                                         <th style="font-size: 0.9rem"> Mobile <span style="color: red;">*</span> </th>
                                         <td>
                                             <input type="tel" id="mobile" name="mobile"
                                                 class="form-control form-control-sm text-right" style="width:50%"
                                                 oninput="restrictMobileInput(event)"
                                                 placeholder="Enter 10 digit mobile number" required />
-                                                <span style="color: #888; font-size: 0.8rem; display: block; margin-top: 5px;">(Please enter a valid 10-digit Mobile Number)</span>
+                                            <span
+                                                style="color: #888; font-size: 0.8rem; display: block; margin-top: 5px;">(Please
+                                                enter a valid 10-digit Mobile Number)</span>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="text-center" style="font-size: 0.9rem"> 7. </th>
-                                        <th style="font-size: 0.9rem"> Alternate Mobile <span style="color: red;">*</span></th>
+                                        <th class="text-center" style="font-size: 0.9rem"> 10. </th>
+                                        <th style="font-size: 0.9rem"> Alternate Mobile <span
+                                                style="color: red;">*</span></th>
                                         <td>
                                             <input type="number" id="altr_mobile" name="altr_mobile"
                                                 class="form-control form-control-sm text-right" style="width:50%"
                                                 oninput="restrictAlternateMobileInput(event)"
-                                                placeholder="Enter Alternate Mobile"  required/>
-                                                <span style="color: #888; font-size: 0.8rem; display: block; margin-top: 5px;">(Please enter a valid 10-digit Alternate Mobile Number)</span>
-                                        
+                                                placeholder="Enter Alternate Mobile" required />
+                                            <span
+                                                style="color: #888; font-size: 0.8rem; display: block; margin-top: 5px;">(Please
+                                                enter a valid 10-digit Alternate Mobile Number)</span>
+
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="text-center" style="font-size: 0.9rem"> 8. </th>
+                                        <th class="text-center" style="font-size: 0.9rem"> 11. </th>
                                         <th style="font-size: 0.9rem"> Services <span style="color: red;">*</span></th>
                                         <td colspan="2">
                                             <table>
@@ -169,15 +213,23 @@
                         </div>
                     </div>
                 </div>
-                <br>
+                <!-- <br> -->
                 <div class="row">
-                    <div class="col-md-2 offset-md-5">
-                        <button type="submit" id="submit"
-                            class="btn btn-primary btn-sm form-control form-control-sm form-control form-control-sm-sm"
-                            disabled>
-                            <em class="fas fa-save"></em> Save
-                        </button>
-                    </div>
+    <div class="col-md-2 offset-md-4">
+        <a href="{{ route('admin.new_admin.index') }}" class="btn btn-secondary btn-sm form-control form-control-sm">
+            <em class="fas fa-arrow-left"></em> Back
+        </a>
+    </div>
+    <div class="col-md-2">
+        <button type="submit" id="submit" class="btn btn-primary btn-sm form-control form-control-sm" disabled>
+            <em class="fas fa-save"></em> Save As Draft
+        </button>
+    </div>
+</div>
+                
+
+
+                    
                 </div>
             </form>
         </div>
@@ -189,6 +241,9 @@
     function toggleSaveButton() {
         var bankName = document.getElementById("bank_name").value;
         var panNumber = document.getElementById("pan").value;
+        var license_key = document.getElementById("license_key").value;
+        var valid_from = document.getElementById("valid_from").value;
+        var valid_to = document.getElementById("valid_to").value;
         var email = document.getElementById("email").value;
         var contactPerson = document.getElementById("contact_person").value;
         var designation = document.getElementById("designation").value;
@@ -218,6 +273,15 @@
         if (!/^[0-9]{10}$/.test(altr_mobile)) {
             isValid = false;
         }
+        if (!license_key) {
+            isValid = false;
+        }
+        if (!valid_from) {
+            isValid = false;
+        }
+        if (!valid_to) {
+            isValid = false;
+        }
 
         document.getElementById("submit").disabled = !isValid;
     }
@@ -226,6 +290,9 @@
     window.onload = function () {
         document.getElementById("bank_name").addEventListener("input", toggleSaveButton);
         document.getElementById("pan").addEventListener("input", toggleSaveButton);
+        document.getElementById("license_key").addEventListener("input", toggleSaveButton);
+        document.getElementById("valid_from").addEventListener("input", toggleSaveButton);
+        document.getElementById("valid_to").addEventListener("input", toggleSaveButton);
         document.getElementById("email").addEventListener("input", toggleSaveButton);
         document.getElementById("contact_person").addEventListener("input", toggleSaveButton);
         document.getElementById("designation").addEventListener("input", toggleSaveButton);
@@ -314,6 +381,13 @@
         if (!regex.test(inputValue)) {
             e.target.value = inputValue.replace(/[^0-9]/g, '');
         }
+    }
+    function setMinValidToDate() {
+        var validFromDate = document.getElementById("valid_from").value;
+        var validToDateInput = document.getElementById("valid_to");
+
+        // Set the min date of the "Valid To" field as the "Valid From" date
+        validToDateInput.min = validFromDate;
     }
 </script>
 <script>

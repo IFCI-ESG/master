@@ -3,9 +3,11 @@
 use App\Http\Controllers\RoutingController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BankController;
+
+
 //use App\Http\Controllers\Admin\LoginController;
-// use App\Http\Controllers\Admin\HomeController;
-// use App\Http\Controllers\Admin\UserController;
+ use App\Http\Controllers\Admin\BankBranchController;
+use App\Http\Controllers\Admin\UserController;
 
 
 //require __DIR__ . '/auth.php';
@@ -70,7 +72,7 @@ Route::name('admin.')->prefix('admin')->middleware(['auth:admin', 'role:SuperAdm
 
   Route::get('user/prowess/api', [\App\Http\Controllers\Admin\UserController::class, 'prowessapi'])->name('user.prowessapi');
 
-
+  Route::put('/user/update', [\App\Http\Controllers\Admin\UserController::class, 'updateAccount'])->name('user.updateAccount');
 
 
 
@@ -91,12 +93,19 @@ Route::name('admin.')->prefix('admin')->middleware(['auth:admin', 'role:SuperAdm
 
   Route::delete('user/bulk/company/{file}', [\App\Http\Controllers\Admin\CompanyBulkUploadController::class, 'deleteCorp'])->name('user.bulk.company.delete');
 
+//Branch 
 
   Route::get('bank_branch_bulk/index', [\App\Http\Controllers\Admin\BankBranchController::class, 'index'])->name('bank_branch_bulk.index');
 
   Route::get('bank_branch_bulk/create', [\App\Http\Controllers\Admin\BankBranchController::class, 'create'])->name('bank_branch_bulk.create');
 
   Route::post('bank_branch_bulk/store', [\App\Http\Controllers\Admin\BankBranchController::class, 'store'])->name('bank_branch_bulk.store');
+  Route::get('bank_branch_bulk/addbranch', [\App\Http\Controllers\Admin\BankBranchController::class, 'add'])->name('bank_branch_bulk.addbranch');
+  Route::get('bank_branch_bulk/editbranch/{id}', [\App\Http\Controllers\Admin\BankBranchController::class, 'edit'])->name('bank_branch_bulk.editbranch');
+  Route::get('/admin/bank-branch/{id}/view', [\App\Http\Controllers\Admin\BankBranchController::class, 'view'])->name('admin.bank_branch_bulk.viewbranch');
+  Route::post('bank_branch_bulk/update', [\App\Http\Controllers\Admin\BankBranchController::class, 'update'])->name('bank_branch_bulk.update');
+  Route::post('bank_branch_bulk/submit', [\App\Http\Controllers\Admin\BankBranchController::class, 'submit'])->name('bank_branch_bulk.submit');
+
 
 
 
@@ -104,19 +113,21 @@ Route::name('admin.')->prefix('admin')->middleware(['auth:admin', 'role:SuperAdm
   Route::get('new_admin/create', [\App\Http\Controllers\Admin\BankController::class, 'create'])->name('new_admin.create');
   Route::post('new_admin/store', [\App\Http\Controllers\Admin\BankController::class, 'store'])->name('new_admin.store');
   Route::get('new_admin/edit/{id}', [\App\Http\Controllers\Admin\BankController::class, 'edit'])->name('new_admin.edit');
+  Route::get('new_admin/view/{id}', [\App\Http\Controllers\Admin\BankController::class, 'view'])->name('new_admin.view');
   Route::post('new_admin/update', [\App\Http\Controllers\Admin\BankController::class, 'update'])->name('new_admin.update');
   Route::post('new_admin/submit', [\App\Http\Controllers\Admin\BankController::class, 'submit'])->name('new_admin.submit');
   Route::get('new_admin/com_list/{bank_id}', [\App\Http\Controllers\Admin\BankController::class, 'com_list'])->name('new_admin.com_list');
   Route::get('new_admin/toggle_status/{id}', [\App\Http\Controllers\Admin\BankController::class, 'toggleStatus'])->name('admin.new_admin.toggle_status');
+  
+  Route::get('/new_admin/bank/activate/{id}', [\App\Http\Controllers\Admin\BankController::class, 'activate'])->name('new_admin.bank.activate');
+  Route::get('/new_admin/bank/deactivate/{id}', [\App\Http\Controllers\Admin\BankController::class, 'deactivate'])->name('new_admin.bank.deactivate');
+  //Route::post('/new_admin/update-account', [\App\Http\Controllers\Admin\BankController::class, 'updateAccount'])->name('new_admin.updateAccount');
+  Route::post('/new_admin/bank/update-account', [\App\Http\Controllers\Admin\BankController::class, 'updateAccount'])
+  ->name('new_admin.bank.updateAccount');
 
-
-
-
-
-
-
-
-
+// OTP generation route
+Route::post('/new_admin/bank/generate-otp', [\App\Http\Controllers\Admin\BankController::class, 'generateOtp'])
+    ->name('new_admin.bank.generateOtp');
 
 
 
@@ -168,6 +179,8 @@ Route::name('admin.')->prefix('admin')->middleware(['auth:admin', 'role:SuperAdm
   // Route::get('user/exist_edit/{id}', 'Admin\UserController@existuser_edit')->name('user.existuser_edit');
   // Route::post('user/existupdate', 'Admin\UserController@existupdate')->name('user.existupdate');
 
+
+  
 
   Route::get('company_list', 'Admin\ListController@index')->name('user.company_list');
   Route::get('company/view/{com_id}/{fy_id}', 'Admin\ListController@view')->name('user.company_view');

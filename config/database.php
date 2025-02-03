@@ -87,7 +87,7 @@ return [
             'url' => env('DB_URL'),
             'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'carbon_footprint_new'),
+            'database' => env('DB_DATABASE', 'carbon_footprint'),
             'username' => env('DB_USERNAME', 'carbon_footprint'),
             'password' => env('DB_PASSWORD', 'carbon_footprint'),
             'charset' => env('DB_CHARSET', 'utf8'),

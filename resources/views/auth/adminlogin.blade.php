@@ -16,7 +16,7 @@
         <div class="auth-fluid-right ">
             <div class="auth-user-testimonial" style="margin: 10vh;">
                 <h2 class="mb-3 text-white text-center"> Important Instructions</h2>
-                <p class="lead" > 
+                <p class="lead" >
                         <li style="font-size: 20px;">Password should be at least 8 characters long, including one lowercase letter, one uppercase letter, one number, and one special character from @$!%*?&</li>
 
                         <li style="font-size: 20px;"><span> DO NOT</span> provide your username and password anywhere other than in this page</li>
@@ -93,7 +93,7 @@
                             <a href="" class="text-muted float-end"><small>Forgot password?</small></a>
                             <label for="password" class="form-label">Password</label>
                             <div class="input-group input-group-merge">
- 
+
                      <input id="password" type="password"
                 class="form-control @error('password') is-invalid @enderror" name="password"
                 placeholder="" required autocomplete="off">
@@ -120,24 +120,7 @@
                             <button class="btn btn-primary" type="submit">Log In </button>
                         </div>
 
-                        <!-- social-->
-                    <!--     <div class="text-center mt-4">
-                            <p class="text-muted font-16">Sign in with</p>
-                            <ul class="social-list list-inline mt-3">
-                                <li class="list-inline-item">
-                                    <a href="javascript: void(0);" class="social-list-item border-primary text-primary"><i class="mdi mdi-facebook"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="javascript: void(0);" class="social-list-item border-danger text-danger"><i class="mdi mdi-google"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="javascript: void(0);" class="social-list-item border-info text-info"><i class="mdi mdi-twitter"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="javascript: void(0);" class="social-list-item border-secondary text-secondary"><i class="mdi mdi-github"></i></a>
-                                </li>
-                            </ul>
-                        </div> -->
+
                     </form>
                     <!-- end form-->
 

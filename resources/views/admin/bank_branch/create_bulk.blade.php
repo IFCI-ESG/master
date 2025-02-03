@@ -62,11 +62,17 @@
                                 <i class="dripicons-cross"></i>
                             </a>
                         </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
-
+        <div class="row">
+                    <div class="col-md-2 offset-md-4">
+                        <a href="{{ route('admin.bank_branch_bulk.index') }}" class="btn btn-secondary btn-sm form-control form-control-sm">
+                            <em class="fas fa-arrow-left"></em> Back
+                        </a>
+                    </div>
 
         <!-- end row -->
 

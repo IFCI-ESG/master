@@ -78,7 +78,7 @@
                             <a href="{{ route('any', 'dashboard-3') }}" class="menu-link"><span class="menu-text">Dashboard 3</span></a>
                         </li>
                         <li class="menu-item">
-                            <a href="{{ route('any', 'dashboard-4') }}" class="menu-link"><span class="menu-text">Dashboard 4</span></a>
+                            <a href="{{ route('any', 'dashboard-4') }}" class="menu-link"><span class="menu-text">Dashboard</span></a>
                         </li>
                     </ul>
                 </div>

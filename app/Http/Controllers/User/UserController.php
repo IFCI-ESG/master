@@ -26,6 +26,19 @@ use SimpleXMLElement;
 class UserController extends Controller
 {
 
+
+    public function updatePassword(Request $request)
+    {
+        $request->validate([
+            'password' => 'required|string|min:6|confirmed',
+        ]);
+
+        $user = auth()->user(); // Get the currently authenticated user
+        $user->password = Hash::make($request->password);
+        $user->save();
+
+        return response()->json(['success' => true]);
+    }
     public function index()
     {
         $user = Auth::user();

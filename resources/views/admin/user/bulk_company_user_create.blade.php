@@ -9,7 +9,7 @@
     <div class="container-fluid">
 
         @include('layouts.shared.page-title' , ['title' => 'Bulk Upload Company','subtitle' => 'Forms'])
-        
+
         <div class="row">
             <div class="col-12">
                 <div class="card">
@@ -21,11 +21,11 @@
                         <p class="sub-header">
                             Please Upload Your Exposure List with valid  IFSC code.
                         </p>
-                        
+
                         <form action="{{ route('admin.user.bulk.company.store') }}" method="post" class="dropzone" id="myAwesomeDropzone" data-plugin="dropzone"
                               data-previews-container="#file-previews"
                               data-upload-preview-template="#uploadPreviewTemplate">
-                            
+
                               @csrf
                             <div class="fallback">
                                 <input name="file" type="file"  data-max-file-size="1M"/>

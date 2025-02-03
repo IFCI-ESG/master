@@ -1,32 +1,30 @@
 @extends('layouts.vertical', ['title' => 'ESG PRAKRIT'])
 
 @section('content')
-<!-- Start Content-->
+
 <div class="container-fluid">
 
-    @include('layouts.shared.page-title', ['title' => 'Exposure', 'subtitle' => ''])
 
 
     @section('css')
     @vite(['node_modules/datatables.net-bs5/css/dataTables.bootstrap5.min.css', 'node_modules/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css', 'node_modules/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css', 'node_modules/datatables.net-select-bs5/css/select.bootstrap5.min.css'])
     @endsection
 
-    <div class="row mb-2">
-        <div class="col-sm-4">
-            <a href="{{ route('admin.new_admin.create') }}"
-                class="btn btn-danger rounded-pill waves-effect waves-light mb-3"><i class="mdi mdi-plus"></i> Create
-                New Bank</a>
-        </div>
-    </div>
 
 
 
     <div class="row">
         <div class="col-md-12">
 
-            <div class="card border-primary mt-4">
+        <div class="card border-primary mt-4">
                 <div class="card card-success card-outline shadow p-1">
-                    <h5 class="card-title">Banks1</h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="card-title mb-0">List of Banks</h5>
+                        <a href="{{ route('admin.new_admin.create') }}"
+                            class="d-flex justify-content-between align-items-center">
+                            <i class="mdi mdi-image-plus"></i> Add Bank
+                        </a>
+                    </div>
                 </div>
                 <div class="card-body">
                     <div class="row">
@@ -59,7 +57,7 @@
                                                         {{$bank->designation ? $bank->designation : '--'}}</td>
                                                     <td class="text-center" style="font-size:0.8rem ;">
                                                         {{$bank->mobile ? $bank->mobile : '--'}}</td>
-                                                 
+
                                                     <td class="text-center">
                                                         @if ($bank->status == 'S')
                                                             <span class="badge text-bg-success"
@@ -69,17 +67,41 @@
                                                                 style="background-color: #FFF4E5; color: #FFA500; font-size: 0.8rem; padding: 3px 8px; border-radius: 4px;">Draft</span>
                                                         @endif
                                                     </td>
-                                                   <td class="text-center">
-    @if ($bank->status == 'S')
-        <a href="{{ route('admin.new_admin.com_list', ['bank_id' => encrypt($bank->id)]) }}" class="text-warning">
-            <i class="fa fa-eye"></i>
-        </a>
-    @elseif($bank->status == 'D')
-        <a href="{{ route('admin.new_admin.edit', ['id' => encrypt($bank->id)]) }}" class="text-success">
-            <i class="fa fa-edit"></i>
-        </a>
-    @endif
+                                                    <td class="text-center">
+    <div class="dropdown">
+        <button class="btn btn-light dropdown-toggle" type="button" id="actionMenu" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-ellipsis-v"></i>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="actionMenu">
+            @if ($bank->status == 'S')
+                <li>
+                    <a class="dropdown-item text-warning" href="{{ route('admin.new_admin.view', ['id' => encrypt($bank->id)]) }}">
+                        <i class="fa fa-eye"></i> View
+                    </a>
+                </li>
+            @endif
+            <li>
+                <a class="dropdown-item text-success" href="{{ route('admin.new_admin.edit', ['id' => encrypt($bank->id)]) }}">
+                    <i class="fa fa-edit"></i> Edit
+                </a>
+            </li>
+            @if ($bank->isactive == 'Y')
+                <li>
+                    <a class="dropdown-item text-danger" href="{{ route('admin.new_admin.bank.deactivate', ['id' => encrypt($bank->id)]) }}">
+                        <i class="fa fa-toggle-off"></i> Deactivate
+                    </a>
+                </li>
+            @elseif($bank->isactive == 'N')
+                <li>
+                    <a class="dropdown-item text-success" href="{{ route('admin.new_admin.bank.activate', ['id' => encrypt($bank->id)]) }}">
+                        <i class="fa fa-toggle-on"></i> Activate
+                    </a>
+                </li>
+            @endif
+        </ul>
+    </div>
 </td>
+
                                                 </tr>
                                             @endforeach
                                         @else
@@ -102,9 +124,6 @@
         </div>
     </div>
 </div>
-
-
-
 @section('script')
 @vite(['resources/js/pages/datatables.init.js'])
 @endsection
@@ -113,15 +132,15 @@
 <script>
     $(document).ready(function () {
         $('#example').DataTable({
-            dom: 'Bfrtip', // This controls the elements on the page (B = buttons, f = search box, r = processing, t = table, i = table info, p = pagination)
-            buttons: [
-                'copy', 'csv', 'excel', 'pdf', 'print' // Export buttons
+            dom: 'Bfrtip',
+             buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
             ],
-            responsive: true,  // Ensures the table is responsive on small screens
-            paging: true,      // Enable pagination
-            searching: true,   // Enable search bar
-            ordering: true,    // Enable sorting
-            info: true         // Display the table information (e.g. "Showing 1 to 10 of 57 entries")
+            responsive: true,
+            paging: true,
+            searching: true,
+            ordering: true,
+            info: true
         });
     });
 </script>

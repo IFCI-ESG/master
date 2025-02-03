@@ -35,6 +35,7 @@ class LoginIDController extends Controller
      */
     public function create()
     {
+        
         $role =DB::Table('roles')->whereIn('id',['2','8'])->get();
 
         return view('admin.login_create',compact('role'));

@@ -1,10 +1,10 @@
-@extends('layouts.vertical', ['title' => 'Dashboard 4'])
+@extends('layouts.vertical', ['title' => 'Dashboard'])
 
 @section('content')
     <!-- Start Content-->
     <div class="container-fluid">
 
-        @include('layouts.shared.page-title' , ['title' => 'Dashboard 4','subtitle' => 'Dashboards'])
+        @include('layouts.shared.page-title' , ['title' => 'Dashboard','subtitle' => 'Dashboard'])
 
         <div class="row">
 
