@@ -1,0 +1,1411 @@
+{
+  "_Chart.bundle.min-CiRumIfa.js": {
+    "file": "assets/Chart.bundle.min-CiRumIfa.js",
+    "name": "Chart.bundle.min",
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "__commonjs-dynamic-modules-TDtrdbi3.js": {
+    "file": "assets/_commonjs-dynamic-modules-TDtrdbi3.js",
+    "name": "_commonjs-dynamic-modules"
+  },
+  "__commonjsHelpers-BosuxZz1.js": {
+    "file": "assets/_commonjsHelpers-BosuxZz1.js",
+    "name": "_commonjsHelpers"
+  },
+  "_apexcharts.common-Cc8XBVXb.js": {
+    "file": "assets/apexcharts.common-Cc8XBVXb.js",
+    "name": "apexcharts.common",
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "_apexcharts.min-BhBGJpcr.js": {
+    "file": "assets/apexcharts.min-BhBGJpcr.js",
+    "name": "apexcharts.min",
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "_bootstrap.min-EmNJFznO.js": {
+    "file": "assets/bootstrap.min-EmNJFznO.js",
+    "name": "bootstrap.min",
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "_index-ArTk25LS.js"
+    ]
+  },
+  "_dataTables.bootstrap5.min-DOu0eajj.js": {
+    "file": "assets/dataTables.bootstrap5.min-DOu0eajj.js",
+    "name": "dataTables.bootstrap5.min",
+    "imports": [
+      "_jquery-DdWMSsjJ.js",
+      "_dataTables.responsive-CTfasoYr.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "_dataTables.responsive-CTfasoYr.js": {
+    "file": "assets/dataTables.responsive-CTfasoYr.js",
+    "name": "dataTables.responsive",
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "_jquery-DdWMSsjJ.js"
+    ]
+  },
+  "_dragula.min-rsYEjyIk.js": {
+    "file": "assets/dragula.min-rsYEjyIk.js",
+    "name": "dragula.min",
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "__commonjs-dynamic-modules-TDtrdbi3.js"
+    ]
+  },
+  "_dropify.min-8DgFiP_C.js": {
+    "file": "assets/dropify.min-8DgFiP_C.js",
+    "name": "dropify.min",
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "_jquery-DdWMSsjJ.js"
+    ]
+  },
+  "_dropzone.min-C9ipFdOa.js": {
+    "file": "assets/dropzone.min-C9ipFdOa.js",
+    "name": "dropzone.min"
+  },
+  "_flatpickr.min-!~{023}~.js": {
+    "file": "assets/flatpickr-BArvkMiJ.css",
+    "src": "node_modules/flatpickr/dist/flatpickr.min.css",
+    "isEntry": true
+  },
+  "_flatpickr.min-CzbFJGZY.js": {
+    "file": "assets/flatpickr.min-CzbFJGZY.js",
+    "name": "flatpickr.min",
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "_index-ArTk25LS.js": {
+    "file": "assets/index-ArTk25LS.js",
+    "name": "index",
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "_index-WhmJkuoZ.js"
+    ]
+  },
+  "_index-WhmJkuoZ.js": {
+    "file": "assets/index-WhmJkuoZ.js",
+    "name": "index"
+  },
+  "_jquery-DdWMSsjJ.js": {
+    "file": "assets/jquery-DdWMSsjJ.js",
+    "name": "jquery",
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "_jquery-jvectormap-world-mill-en-zZCUFlNu.js": {
+    "file": "assets/jquery-jvectormap-world-mill-en-zZCUFlNu.js",
+    "name": "jquery-jvectormap-world-mill-en"
+  },
+  "_jquery.knob.min-CbSo-t57.js": {
+    "file": "assets/jquery.knob.min-CbSo-t57.js",
+    "name": "jquery.knob.min"
+  },
+  "_jquery.peity.min-B5kns5m_.js": {
+    "file": "assets/jquery.peity.min-B5kns5m_.js",
+    "name": "jquery.peity.min"
+  },
+  "_jquery.sparkline.min-Cnj0wOvm.js": {
+    "file": "assets/jquery.sparkline.min-Cnj0wOvm.js",
+    "name": "jquery.sparkline.min"
+  },
+  "_jquery.todo-DFHMq2_1.js": {
+    "file": "assets/jquery.todo-DFHMq2_1.js",
+    "name": "jquery.todo"
+  },
+  "_morris-BJDItP4Z.js": {
+    "file": "assets/morris-BJDItP4Z.js",
+    "name": "morris"
+  },
+  "_quill.min-6KjZ1q7U.js": {
+    "file": "assets/quill.min-6KjZ1q7U.js",
+    "name": "quill.min",
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "_raphael.min-BbIYla_3.js": {
+    "file": "assets/raphael.min-BbIYla_3.js",
+    "name": "raphael.min",
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "_select2.min-CaCQe3PM.js": {
+    "file": "assets/select2.min-CaCQe3PM.js",
+    "name": "select2.min",
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "_jquery-DdWMSsjJ.js"
+    ]
+  },
+  "_selectize-BryeZvXx.js": {
+    "file": "assets/selectize-BryeZvXx.js",
+    "name": "selectize",
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "_jquery-DdWMSsjJ.js"
+    ]
+  },
+  "_sweetalert2.min-C-d5gjzI.js": {
+    "file": "assets/sweetalert2.min-C-d5gjzI.js",
+    "name": "sweetalert2.min",
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "node_modules/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css": {
+    "file": "assets/jquery-jvectormap-1.2-Cow3Mg61.css",
+    "src": "node_modules/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css",
+    "isEntry": true
+  },
+  "node_modules/admin-resources/rwd-table/rwd-table.min.css": {
+    "file": "assets/rwd-table-B7cxVzat.css",
+    "src": "node_modules/admin-resources/rwd-table/rwd-table.min.css",
+    "isEntry": true
+  },
+  "node_modules/animate.css/animate.compat.css": {
+    "file": "assets/animate-CM8rMdIj.css",
+    "src": "node_modules/animate.css/animate.compat.css",
+    "isEntry": true
+  },
+  "node_modules/apexcharts/dist/apexcharts.css": {
+    "file": "assets/apexcharts-b2iyaQoW.css",
+    "src": "node_modules/apexcharts/dist/apexcharts.css",
+    "isEntry": true
+  },
+  "node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css": {
+    "file": "assets/bootstrap-datepicker-CxUEa4Ac.css",
+    "src": "node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css",
+    "isEntry": true
+  },
+  "node_modules/bootstrap-table/dist/bootstrap-table.min.css": {
+    "file": "assets/bootstrap-table-B3IY9Z6m.css",
+    "src": "node_modules/bootstrap-table/dist/bootstrap-table.min.css",
+    "isEntry": true
+  },
+  "node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css": {
+    "file": "assets/jquery.bootstrap-touchspin-1d8uTgqM.css",
+    "src": "node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css",
+    "isEntry": true
+  },
+  "node_modules/bootstrap/scss/bootstrap.scss": {
+    "file": "assets/bootstrap-BNc9Tzrd.css",
+    "src": "node_modules/bootstrap/scss/bootstrap.scss",
+    "isEntry": true
+  },
+  "node_modules/c3/c3.min.css": {
+    "file": "assets/c3-DyksjCaR.css",
+    "src": "node_modules/c3/c3.min.css",
+    "isEntry": true
+  },
+  "node_modules/chartist/dist/index.css": {
+    "file": "assets/index-PT1m0nWG.css",
+    "src": "node_modules/chartist/dist/index.css",
+    "isEntry": true
+  },
+  "node_modules/clockpicker/dist/bootstrap-clockpicker.min.css": {
+    "file": "assets/bootstrap-clockpicker-arCzYOzb.css",
+    "src": "node_modules/clockpicker/dist/bootstrap-clockpicker.min.css",
+    "isEntry": true
+  },
+  "node_modules/cropper/dist/cropper.min.css": {
+    "file": "assets/cropper-DGrjsD0n.css",
+    "src": "node_modules/cropper/dist/cropper.min.css",
+    "isEntry": true
+  },
+  "node_modules/datatables.net-bs5/css/dataTables.bootstrap5.min.css": {
+    "file": "assets/dataTables.bootstrap5-BoLcRJnV.css",
+    "src": "node_modules/datatables.net-bs5/css/dataTables.bootstrap5.min.css",
+    "isEntry": true
+  },
+  "node_modules/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css": {
+    "file": "assets/buttons.bootstrap5-BAQRDUFH.css",
+    "src": "node_modules/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css",
+    "isEntry": true
+  },
+  "node_modules/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css": {
+    "file": "assets/responsive.bootstrap5-C51jUCg8.css",
+    "src": "node_modules/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css",
+    "isEntry": true
+  },
+  "node_modules/datatables.net-select-bs5/css/select.bootstrap5.min.css": {
+    "file": "assets/select.bootstrap5-D16cdl6T.css",
+    "src": "node_modules/datatables.net-select-bs5/css/select.bootstrap5.min.css",
+    "isEntry": true
+  },
+  "node_modules/dropify/dist/css/dropify.min.css": {
+    "file": "assets/dropify-B0iT6jdB.css",
+    "src": "node_modules/dropify/dist/css/dropify.min.css",
+    "isEntry": true
+  },
+  "node_modules/dropify/dist/fonts/dropify.eot": {
+    "file": "assets/dropify-DNXr_Kli.eot",
+    "src": "node_modules/dropify/dist/fonts/dropify.eot"
+  },
+  "node_modules/dropify/dist/fonts/dropify.svg": {
+    "file": "assets/dropify-Brhiu8JO.svg",
+    "src": "node_modules/dropify/dist/fonts/dropify.svg"
+  },
+  "node_modules/dropify/dist/fonts/dropify.ttf": {
+    "file": "assets/dropify-DYBgaHoZ.ttf",
+    "src": "node_modules/dropify/dist/fonts/dropify.ttf"
+  },
+  "node_modules/dropify/dist/fonts/dropify.woff": {
+    "file": "assets/dropify-CI_IqX0E.woff",
+    "src": "node_modules/dropify/dist/fonts/dropify.woff"
+  },
+  "node_modules/dropzone/dist/min/dropzone.min.css": {
+    "file": "assets/dropzone-Bf9zygIw.css",
+    "src": "node_modules/dropzone/dist/min/dropzone.min.css",
+    "isEntry": true
+  },
+  "node_modules/flatpickr/dist/flatpickr.min.css": {
+    "file": "assets/flatpickr-BArvkMiJ.css",
+    "src": "node_modules/flatpickr/dist/flatpickr.min.css",
+    "isEntry": true
+  },
+  "node_modules/fullcalendar/main.min.css": {
+    "file": "assets/main-Dtbw5CE2.css",
+    "src": "node_modules/fullcalendar/main.min.css",
+    "isEntry": true
+  },
+  "node_modules/hopscotch/dist/css/hopscotch.min.css": {
+    "file": "assets/hopscotch-DvIy86bR.css",
+    "src": "node_modules/hopscotch/dist/css/hopscotch.min.css",
+    "isEntry": true
+  },
+  "node_modules/hopscotch/dist/img/sprite-green.png": {
+    "file": "assets/sprite-green-CYbL2F8D.png",
+    "src": "node_modules/hopscotch/dist/img/sprite-green.png"
+  },
+  "node_modules/ion-rangeslider/css/ion.rangeSlider.min.css": {
+    "file": "assets/ion.rangeSlider-BDFw3z-K.css",
+    "src": "node_modules/ion-rangeslider/css/ion.rangeSlider.min.css",
+    "isEntry": true
+  },
+  "node_modules/jquery-toast-plugin/dist/jquery.toast.min.css": {
+    "file": "assets/jquery.toast-DZ87MWyh.css",
+    "src": "node_modules/jquery-toast-plugin/dist/jquery.toast.min.css",
+    "isEntry": true
+  },
+  "node_modules/jsgrid/dist/jsgrid-theme.min.css": {
+    "file": "assets/jsgrid-theme-Dvo9iDy8.css",
+    "src": "node_modules/jsgrid/dist/jsgrid-theme.min.css",
+    "isEntry": true
+  },
+  "node_modules/jsgrid/dist/jsgrid.min.css": {
+    "file": "assets/jsgrid-DsoapGKd.css",
+    "src": "node_modules/jsgrid/dist/jsgrid.min.css",
+    "isEntry": true
+  },
+  "node_modules/ladda/dist/ladda-themeless.min.css": {
+    "file": "assets/ladda-themeless-CgKg9MPH.css",
+    "src": "node_modules/ladda/dist/ladda-themeless.min.css",
+    "isEntry": true
+  },
+  "node_modules/ladda/dist/ladda.min.css": {
+    "file": "assets/ladda-G86yARyR.css",
+    "src": "node_modules/ladda/dist/ladda.min.css",
+    "isEntry": true
+  },
+  "node_modules/magnific-popup/dist/magnific-popup.css": {
+    "file": "assets/magnific-popup-OVv-CEzp.css",
+    "src": "node_modules/magnific-popup/dist/magnific-popup.css",
+    "isEntry": true
+  },
+  "node_modules/mohithg-switchery/dist/switchery.min.css": {
+    "file": "assets/switchery-DUPK3t5k.css",
+    "src": "node_modules/mohithg-switchery/dist/switchery.min.css",
+    "isEntry": true
+  },
+  "node_modules/multiselect/css/multi-select.css": {
+    "file": "assets/multi-select-DdM5_RSa.css",
+    "src": "node_modules/multiselect/css/multi-select.css",
+    "isEntry": true
+  },
+  "node_modules/multiselect/img/switch.png": {
+    "file": "assets/switch-DiVnRRx9.png",
+    "src": "node_modules/multiselect/img/switch.png"
+  },
+  "node_modules/nestable2/dist/jquery.nestable.min.css": {
+    "file": "assets/jquery.nestable-TmZqaKVT.css",
+    "src": "node_modules/nestable2/dist/jquery.nestable.min.css",
+    "isEntry": true
+  },
+  "node_modules/quill/dist/quill.bubble.css": {
+    "file": "assets/quill-DiK_EvnP.css",
+    "src": "node_modules/quill/dist/quill.bubble.css",
+    "isEntry": true
+  },
+  "node_modules/quill/dist/quill.core.css": {
+    "file": "assets/quill-CbifmyA-.css",
+    "src": "node_modules/quill/dist/quill.core.css",
+    "isEntry": true
+  },
+  "node_modules/quill/dist/quill.snow.css": {
+    "file": "assets/quill-D-h-yQ65.css",
+    "src": "node_modules/quill/dist/quill.snow.css",
+    "isEntry": true
+  },
+  "node_modules/select2/dist/css/select2.min.css": {
+    "file": "assets/select2-CvxZI5vq.css",
+    "src": "node_modules/select2/dist/css/select2.min.css",
+    "isEntry": true
+  },
+  "node_modules/selectize/dist/css/selectize.bootstrap3.css": {
+    "file": "assets/selectize-D2byrTCl.css",
+    "src": "node_modules/selectize/dist/css/selectize.bootstrap3.css",
+    "isEntry": true
+  },
+  "node_modules/spectrum-colorpicker2/dist/spectrum.min.css": {
+    "file": "assets/spectrum-DKodQZyH.css",
+    "src": "node_modules/spectrum-colorpicker2/dist/spectrum.min.css",
+    "isEntry": true
+  },
+  "node_modules/sweetalert2/dist/sweetalert2.min.css": {
+    "file": "assets/sweetalert2-Ct3ExUCr.css",
+    "src": "node_modules/sweetalert2/dist/sweetalert2.min.css",
+    "isEntry": true
+  },
+  "node_modules/tablesaw/dist/tablesaw.css": {
+    "file": "assets/tablesaw-UsfoJVcE.css",
+    "src": "node_modules/tablesaw/dist/tablesaw.css",
+    "isEntry": true
+  },
+  "node_modules/tippy.js/dist/tippy.css": {
+    "file": "assets/tippy-LpQX8T_H.css",
+    "src": "node_modules/tippy.js/dist/tippy.css",
+    "isEntry": true
+  },
+  "node_modules/x-editable/dist/bootstrap-editable/css/bootstrap-editable.css": {
+    "file": "assets/bootstrap-editable-Bqw9hfKg.css",
+    "src": "node_modules/x-editable/dist/bootstrap-editable/css/bootstrap-editable.css",
+    "isEntry": true
+  },
+  "node_modules/x-editable/dist/bootstrap-editable/img/clear.png": {
+    "file": "assets/clear-DqTgjJ-s.png",
+    "src": "node_modules/x-editable/dist/bootstrap-editable/img/clear.png"
+  },
+  "node_modules/x-editable/dist/bootstrap-editable/img/loading.gif": {
+    "file": "assets/loading-CwvWj_Ry.gif",
+    "src": "node_modules/x-editable/dist/bootstrap-editable/img/loading.gif"
+  },
+  "public/images/bg-auth.jpg": {
+    "file": "assets/bg-auth-BMwvGiFQ.jpg",
+    "src": "public/images/bg-auth.jpg"
+  },
+  "public/images/bg-pattern-2.png": {
+    "file": "assets/bg-pattern-2-tnrqvd3z.png",
+    "src": "public/images/bg-pattern-2.png"
+  },
+  "public/images/bg-pattern.png": {
+    "file": "assets/bg-pattern-2w7N7ooQ.png",
+    "src": "public/images/bg-pattern.png"
+  },
+  "public/images/clear.png": {
+    "file": "assets/clear-DqTgjJ-s.png",
+    "src": "node_modules/x-editable/dist/bootstrap-editable/img/clear.png"
+  },
+  "public/images/jsgrid.png": {
+    "file": "assets/jsgrid-C638bdRO.png",
+    "src": "public/images/jsgrid.png"
+  },
+  "public/images/loading.gif": {
+    "file": "assets/loading-CwvWj_Ry.gif",
+    "src": "node_modules/x-editable/dist/bootstrap-editable/img/loading.gif"
+  },
+  "public/images/megamenu-bg.png": {
+    "file": "assets/megamenu-bg-CXergqMd.png",
+    "src": "public/images/megamenu-bg.png"
+  },
+  "public/images/multiple-arrow.png": {
+    "file": "assets/multiple-arrow-DNDT3mEg.png",
+    "src": "public/images/multiple-arrow.png"
+  },
+  "resources/fonts/bootstrap-icons.woff": {
+    "file": "assets/bootstrap-icons-B-QKbhqn.woff",
+    "src": "resources/fonts/bootstrap-icons.woff"
+  },
+  "resources/fonts/bootstrap-icons.woff2": {
+    "file": "assets/bootstrap-icons-tJ0_KeE2.woff2",
+    "src": "resources/fonts/bootstrap-icons.woff2"
+  },
+  "resources/fonts/cerebrisans-bold.eot": {
+    "file": "assets/cerebrisans-bold-x4oTpO8O.eot",
+    "src": "resources/fonts/cerebrisans-bold.eot"
+  },
+  "resources/fonts/cerebrisans-bold.woff": {
+    "file": "assets/cerebrisans-bold-Bw_4lqzB.woff",
+    "src": "resources/fonts/cerebrisans-bold.woff"
+  },
+  "resources/fonts/cerebrisans-light.eot": {
+    "file": "assets/cerebrisans-light-pkstKCmC.eot",
+    "src": "resources/fonts/cerebrisans-light.eot"
+  },
+  "resources/fonts/cerebrisans-light.woff": {
+    "file": "assets/cerebrisans-light-BynRG5c-.woff",
+    "src": "resources/fonts/cerebrisans-light.woff"
+  },
+  "resources/fonts/cerebrisans-medium.eot": {
+    "file": "assets/cerebrisans-medium-D-SO_BjU.eot",
+    "src": "resources/fonts/cerebrisans-medium.eot"
+  },
+  "resources/fonts/cerebrisans-medium.woff": {
+    "file": "assets/cerebrisans-medium-CZ86iGDl.woff",
+    "src": "resources/fonts/cerebrisans-medium.woff"
+  },
+  "resources/fonts/cerebrisans-regular.eot": {
+    "file": "assets/cerebrisans-regular-DWaa6uTP.eot",
+    "src": "resources/fonts/cerebrisans-regular.eot"
+  },
+  "resources/fonts/cerebrisans-regular.woff": {
+    "file": "assets/cerebrisans-regular-BSLK3Mrm.woff",
+    "src": "resources/fonts/cerebrisans-regular.woff"
+  },
+  "resources/fonts/cerebrisans-semibold.eot": {
+    "file": "assets/cerebrisans-semibold-BB03Fs2A.eot",
+    "src": "resources/fonts/cerebrisans-semibold.eot"
+  },
+  "resources/fonts/cerebrisans-semibold.woff": {
+    "file": "assets/cerebrisans-semibold-BTHjlGUH.woff",
+    "src": "resources/fonts/cerebrisans-semibold.woff"
+  },
+  "resources/fonts/dripicons-v2.eot": {
+    "file": "assets/dripicons-v2-DFvnbGWz.eot",
+    "src": "resources/fonts/dripicons-v2.eot"
+  },
+  "resources/fonts/dripicons-v2.svg": {
+    "file": "assets/dripicons-v2-DLwXtOXU.svg",
+    "src": "resources/fonts/dripicons-v2.svg"
+  },
+  "resources/fonts/dripicons-v2.ttf": {
+    "file": "assets/dripicons-v2-OmeD2O4i.ttf",
+    "src": "resources/fonts/dripicons-v2.ttf"
+  },
+  "resources/fonts/dripicons-v2.woff": {
+    "file": "assets/dripicons-v2-DRZ43psE.woff",
+    "src": "resources/fonts/dripicons-v2.woff"
+  },
+  "resources/fonts/dropify.eot": {
+    "file": "assets/dropify-DNXr_Kli.eot",
+    "src": "node_modules/dropify/dist/fonts/dropify.eot"
+  },
+  "resources/fonts/dropify.svg": {
+    "file": "assets/dropify-Brhiu8JO.svg",
+    "src": "node_modules/dropify/dist/fonts/dropify.svg"
+  },
+  "resources/fonts/dropify.ttf": {
+    "file": "assets/dropify-DYBgaHoZ.ttf",
+    "src": "node_modules/dropify/dist/fonts/dropify.ttf"
+  },
+  "resources/fonts/dropify.woff": {
+    "file": "assets/dropify-CI_IqX0E.woff",
+    "src": "node_modules/dropify/dist/fonts/dropify.woff"
+  },
+  "resources/fonts/fa-brands-400.eot": {
+    "file": "assets/fa-brands-400-BP-byM1z.eot",
+    "src": "resources/fonts/fa-brands-400.eot"
+  },
+  "resources/fonts/fa-brands-400.svg": {
+    "file": "assets/fa-brands-400-CwYvrPXy.svg",
+    "src": "resources/fonts/fa-brands-400.svg"
+  },
+  "resources/fonts/fa-brands-400.ttf": {
+    "file": "assets/fa-brands-400-BvOfcHLm.ttf",
+    "src": "resources/fonts/fa-brands-400.ttf"
+  },
+  "resources/fonts/fa-brands-400.woff": {
+    "file": "assets/fa-brands-400-DqZqNCSp.woff",
+    "src": "resources/fonts/fa-brands-400.woff"
+  },
+  "resources/fonts/fa-brands-400.woff2": {
+    "file": "assets/fa-brands-400-B9NtTMAN.woff2",
+    "src": "resources/fonts/fa-brands-400.woff2"
+  },
+  "resources/fonts/fa-regular-400.eot": {
+    "file": "assets/fa-regular-400-C8GVsgD2.eot",
+    "src": "resources/fonts/fa-regular-400.eot"
+  },
+  "resources/fonts/fa-regular-400.svg": {
+    "file": "assets/fa-regular-400-DYS_BsKA.svg",
+    "src": "resources/fonts/fa-regular-400.svg"
+  },
+  "resources/fonts/fa-regular-400.ttf": {
+    "file": "assets/fa-regular-400-CcXn14M0.ttf",
+    "src": "resources/fonts/fa-regular-400.ttf"
+  },
+  "resources/fonts/fa-regular-400.woff": {
+    "file": "assets/fa-regular-400-Cea8WKql.woff",
+    "src": "resources/fonts/fa-regular-400.woff"
+  },
+  "resources/fonts/fa-regular-400.woff2": {
+    "file": "assets/fa-regular-400-BxYFLS9j.woff2",
+    "src": "resources/fonts/fa-regular-400.woff2"
+  },
+  "resources/fonts/fa-solid-900.eot": {
+    "file": "assets/fa-solid-900-DRNqNWD9.eot",
+    "src": "resources/fonts/fa-solid-900.eot"
+  },
+  "resources/fonts/fa-solid-900.svg": {
+    "file": "assets/fa-solid-900-QT1_Ihr7.svg",
+    "src": "resources/fonts/fa-solid-900.svg"
+  },
+  "resources/fonts/fa-solid-900.ttf": {
+    "file": "assets/fa-solid-900-v_-DUAvR.ttf",
+    "src": "resources/fonts/fa-solid-900.ttf"
+  },
+  "resources/fonts/fa-solid-900.woff": {
+    "file": "assets/fa-solid-900-Ic6bH3kJ.woff",
+    "src": "resources/fonts/fa-solid-900.woff"
+  },
+  "resources/fonts/fa-solid-900.woff2": {
+    "file": "assets/fa-solid-900-DQndEtzL.woff2",
+    "src": "resources/fonts/fa-solid-900.woff2"
+  },
+  "resources/fonts/feather.eot": {
+    "file": "assets/feather-B6uk7rDz.eot",
+    "src": "resources/fonts/feather.eot"
+  },
+  "resources/fonts/feather.svg": {
+    "file": "assets/feather-CJHuDf5s.svg",
+    "src": "resources/fonts/feather.svg"
+  },
+  "resources/fonts/feather.ttf": {
+    "file": "assets/feather-DJLJ3y0Y.ttf",
+    "src": "resources/fonts/feather.ttf"
+  },
+  "resources/fonts/feather.woff": {
+    "file": "assets/feather-BBViPOsB.woff",
+    "src": "resources/fonts/feather.woff"
+  },
+  "resources/fonts/footable.eot": {
+    "file": "assets/footable-DSjsyOrB.eot",
+    "src": "resources/fonts/footable.eot"
+  },
+  "resources/fonts/footable.svg": {
+    "file": "assets/footable-Bhr4RRlN.svg",
+    "src": "resources/fonts/footable.svg"
+  },
+  "resources/fonts/footable.ttf": {
+    "file": "assets/footable-ZsMTLsQ3.ttf",
+    "src": "resources/fonts/footable.ttf"
+  },
+  "resources/fonts/footable.woff": {
+    "file": "assets/footable-JPkDE19B.woff",
+    "src": "resources/fonts/footable.woff"
+  },
+  "resources/fonts/materialdesignicons-webfont.eot": {
+    "file": "assets/materialdesignicons-webfont-C9N43Jxz.eot",
+    "src": "resources/fonts/materialdesignicons-webfont.eot"
+  },
+  "resources/fonts/materialdesignicons-webfont.ttf": {
+    "file": "assets/materialdesignicons-webfont-hPx70ptL.ttf",
+    "src": "resources/fonts/materialdesignicons-webfont.ttf"
+  },
+  "resources/fonts/materialdesignicons-webfont.woff": {
+    "file": "assets/materialdesignicons-webfont-DSMUHRBL.woff",
+    "src": "resources/fonts/materialdesignicons-webfont.woff"
+  },
+  "resources/fonts/materialdesignicons-webfont.woff2": {
+    "file": "assets/materialdesignicons-webfont-D8huMFN2.woff2",
+    "src": "resources/fonts/materialdesignicons-webfont.woff2"
+  },
+  "resources/fonts/remixicon.eot": {
+    "file": "assets/remixicon-Crkp6QDu.eot",
+    "src": "resources/fonts/remixicon.eot"
+  },
+  "resources/fonts/remixicon.svg": {
+    "file": "assets/remixicon-bgXgLUrR.svg",
+    "src": "resources/fonts/remixicon.svg"
+  },
+  "resources/fonts/remixicon.ttf": {
+    "file": "assets/remixicon-t1-W4cIE.ttf",
+    "src": "resources/fonts/remixicon.ttf"
+  },
+  "resources/fonts/remixicon.woff": {
+    "file": "assets/remixicon-ChM2DbYV.woff",
+    "src": "resources/fonts/remixicon.woff"
+  },
+  "resources/fonts/remixicon.woff2": {
+    "file": "assets/remixicon-D6lcKq3b.woff2",
+    "src": "resources/fonts/remixicon.woff2"
+  },
+  "resources/fonts/simple-Line-Icons.eot": {
+    "file": "assets/simple-Line-Icons-D2Qs2c95.eot",
+    "src": "resources/fonts/simple-Line-Icons.eot"
+  },
+  "resources/fonts/simple-Line-Icons.svg": {
+    "file": "assets/simple-Line-Icons-uMQT5TYO.svg",
+    "src": "resources/fonts/simple-Line-Icons.svg"
+  },
+  "resources/fonts/simple-Line-Icons.ttf": {
+    "file": "assets/simple-Line-Icons-EjxTRrmL.ttf",
+    "src": "resources/fonts/simple-Line-Icons.ttf"
+  },
+  "resources/fonts/simple-Line-Icons.woff": {
+    "file": "assets/simple-Line-Icons-ZDsBn0s6.woff",
+    "src": "resources/fonts/simple-Line-Icons.woff"
+  },
+  "resources/fonts/simple-Line-Icons.woff2": {
+    "file": "assets/simple-Line-Icons-Bv9trGTx.woff2",
+    "src": "resources/fonts/simple-Line-Icons.woff2"
+  },
+  "resources/fonts/themify.eot": {
+    "file": "assets/themify-BifPJsew.eot",
+    "src": "resources/fonts/themify.eot"
+  },
+  "resources/fonts/themify.svg": {
+    "file": "assets/themify-DqOiMLGc.svg",
+    "src": "resources/fonts/themify.svg"
+  },
+  "resources/fonts/themify.ttf": {
+    "file": "assets/themify-DuU3rJAt.ttf",
+    "src": "resources/fonts/themify.ttf"
+  },
+  "resources/fonts/themify.woff": {
+    "file": "assets/themify-BgsFA67P.woff",
+    "src": "resources/fonts/themify.woff"
+  },
+  "resources/fonts/weathericons-regular-webfont.eot": {
+    "file": "assets/weathericons-regular-webfont-B202zAB6.eot",
+    "src": "resources/fonts/weathericons-regular-webfont.eot"
+  },
+  "resources/fonts/weathericons-regular-webfont.svg": {
+    "file": "assets/weathericons-regular-webfont-DpbmfroD.svg",
+    "src": "resources/fonts/weathericons-regular-webfont.svg"
+  },
+  "resources/fonts/weathericons-regular-webfont.ttf": {
+    "file": "assets/weathericons-regular-webfont-C-NtxvfT.ttf",
+    "src": "resources/fonts/weathericons-regular-webfont.ttf"
+  },
+  "resources/fonts/weathericons-regular-webfont.woff": {
+    "file": "assets/weathericons-regular-webfont-NZb1zGnb.woff",
+    "src": "resources/fonts/weathericons-regular-webfont.woff"
+  },
+  "resources/fonts/weathericons-regular-webfont.woff2": {
+    "file": "assets/weathericons-regular-webfont-DjeDbQGT.woff2",
+    "src": "resources/fonts/weathericons-regular-webfont.woff2"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-oX2CYoSt.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "imports": [
+      "_jquery-DdWMSsjJ.js",
+      "_bootstrap.min-EmNJFznO.js",
+      "__commonjsHelpers-BosuxZz1.js",
+      "_index-ArTk25LS.js",
+      "_index-WhmJkuoZ.js"
+    ]
+  },
+  "resources/js/head.js": {
+    "file": "assets/head-CGKTQIbO.js",
+    "name": "head",
+    "src": "resources/js/head.js",
+    "isEntry": true,
+    "imports": [
+      "_jquery-DdWMSsjJ.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/landing.js": {
+    "file": "assets/landing-ICiclB6z.js",
+    "name": "landing",
+    "src": "resources/js/landing.js",
+    "isEntry": true
+  },
+  "resources/js/layout.js": {
+    "file": "assets/layout-C9Zc8SyJ.js",
+    "name": "layout",
+    "src": "resources/js/layout.js",
+    "isEntry": true
+  },
+  "resources/js/pages/add-product.init.js": {
+    "file": "assets/add-product.init-Bd83-8PM.js",
+    "name": "add-product.init",
+    "src": "resources/js/pages/add-product.init.js",
+    "isEntry": true,
+    "imports": [
+      "_select2.min-CaCQe3PM.js",
+      "_dropzone.min-C9ipFdOa.js",
+      "_quill.min-6KjZ1q7U.js",
+      "_dropify.min-8DgFiP_C.js",
+      "__commonjsHelpers-BosuxZz1.js",
+      "_jquery-DdWMSsjJ.js"
+    ]
+  },
+  "resources/js/pages/animation.init.js": {
+    "file": "assets/animation.init-CiiebJJj.js",
+    "name": "animation.init",
+    "src": "resources/js/pages/animation.init.js",
+    "isEntry": true
+  },
+  "resources/js/pages/apexcharts.init.js": {
+    "file": "assets/apexcharts.init-C4BOP6Pm.js",
+    "name": "apexcharts.init",
+    "src": "resources/js/pages/apexcharts.init.js",
+    "isEntry": true,
+    "imports": [
+      "_apexcharts.min-BhBGJpcr.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/auth.js": {
+    "file": "assets/auth-CrlKREbZ.js",
+    "name": "auth",
+    "src": "resources/js/pages/auth.js",
+    "isEntry": true,
+    "imports": [
+      "_bootstrap.min-EmNJFznO.js",
+      "__commonjsHelpers-BosuxZz1.js",
+      "_index-ArTk25LS.js",
+      "_index-WhmJkuoZ.js"
+    ]
+  },
+  "resources/js/pages/bootstrap-tables.init.js": {
+    "file": "assets/bootstrap-tables.init-DaMT49M6.js",
+    "name": "bootstrap-tables.init",
+    "src": "resources/js/pages/bootstrap-tables.init.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "_jquery-DdWMSsjJ.js"
+    ]
+  },
+  "resources/js/pages/c3.init.js": {
+    "file": "assets/c3.init-2ri808WJ.js",
+    "name": "c3.init",
+    "src": "resources/js/pages/c3.init.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "__commonjs-dynamic-modules-TDtrdbi3.js"
+    ]
+  },
+  "resources/js/pages/calendar.init.js": {
+    "file": "assets/calendar.init-yaDniXjM.js",
+    "name": "calendar.init",
+    "src": "resources/js/pages/calendar.init.js",
+    "isEntry": true,
+    "imports": [
+      "_index-WhmJkuoZ.js"
+    ]
+  },
+  "resources/js/pages/chartist.init.js": {
+    "file": "assets/chartist.init-BNigwtuv.js",
+    "name": "chartist.init",
+    "src": "resources/js/pages/chartist.init.js",
+    "isEntry": true
+  },
+  "resources/js/pages/chartjs.init.js": {
+    "file": "assets/chartjs.init-D45VuYE_.js",
+    "name": "chartjs.init",
+    "src": "resources/js/pages/chartjs.init.js",
+    "isEntry": true,
+    "imports": [
+      "_Chart.bundle.min-CiRumIfa.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/compose.init.js": {
+    "file": "assets/compose.init-BqdbI4ER.js",
+    "name": "compose.init",
+    "src": "resources/js/pages/compose.init.js",
+    "isEntry": true,
+    "imports": [
+      "_quill.min-6KjZ1q7U.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/create-project.init.js": {
+    "file": "assets/create-project.init-CHRH2W86.js",
+    "name": "create-project.init",
+    "src": "resources/js/pages/create-project.init.js",
+    "isEntry": true,
+    "imports": [
+      "_select2.min-CaCQe3PM.js",
+      "_dropzone.min-C9ipFdOa.js",
+      "_flatpickr.min-CzbFJGZY.js",
+      "__commonjsHelpers-BosuxZz1.js",
+      "_jquery-DdWMSsjJ.js"
+    ],
+    "css": [
+      "assets/flatpickr-BArvkMiJ.css"
+    ]
+  },
+  "resources/js/pages/crm-dashboard.init.js": {
+    "file": "assets/crm-dashboard.init-CDC4ql0h.js",
+    "name": "crm-dashboard.init",
+    "src": "resources/js/pages/crm-dashboard.init.js",
+    "isEntry": true,
+    "imports": [
+      "_apexcharts.min-BhBGJpcr.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/crm-leads.init.js": {
+    "file": "assets/crm-leads.init-DsPjcieR.js",
+    "name": "crm-leads.init",
+    "src": "resources/js/pages/crm-leads.init.js",
+    "isEntry": true,
+    "imports": [
+      "_raphael.min-BbIYla_3.js",
+      "_morris-BJDItP4Z.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/crm-opportunities.init.js": {
+    "file": "assets/crm-opportunities.init-B1FAQMSV.js",
+    "name": "crm-opportunities.init",
+    "src": "resources/js/pages/crm-opportunities.init.js",
+    "isEntry": true,
+    "imports": [
+      "_jquery.sparkline.min-Cnj0wOvm.js"
+    ]
+  },
+  "resources/js/pages/customers.init.js": {
+    "file": "assets/customers.init-1nbhGwnT.js",
+    "name": "customers.init",
+    "src": "resources/js/pages/customers.init.js",
+    "isEntry": true,
+    "imports": [
+      "_dataTables.bootstrap5.min-DOu0eajj.js",
+      "_dataTables.responsive-CTfasoYr.js",
+      "_jquery-DdWMSsjJ.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/dashboard-1.init.js": {
+    "file": "assets/dashboard-1.init-O0vT8TQq.js",
+    "name": "dashboard-1.init",
+    "src": "resources/js/pages/dashboard-1.init.js",
+    "isEntry": true,
+    "imports": [
+      "_flatpickr.min-CzbFJGZY.js",
+      "_apexcharts.common-Cc8XBVXb.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ],
+    "css": [
+      "assets/flatpickr-BArvkMiJ.css"
+    ]
+  },
+  "resources/js/pages/dashboard-2.init.js": {
+    "file": "assets/dashboard-2.init-B2rf6Kze.js",
+    "name": "dashboard-2.init",
+    "src": "resources/js/pages/dashboard-2.init.js",
+    "isEntry": true,
+    "imports": [
+      "_jquery.sparkline.min-Cnj0wOvm.js",
+      "_jquery-jvectormap-world-mill-en-zZCUFlNu.js"
+    ]
+  },
+  "resources/js/pages/dashboard-3.init.js": {
+    "file": "assets/dashboard-3.init-CbZ0nRWR.js",
+    "name": "dashboard-3.init",
+    "src": "resources/js/pages/dashboard-3.init.js",
+    "isEntry": true,
+    "imports": [
+      "_Chart.bundle.min-CiRumIfa.js",
+      "_jquery.todo-DFHMq2_1.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/dashboard-4.init.js": {
+    "file": "assets/dashboard-4.init-DDbun8k4.js",
+    "name": "dashboard-4.init",
+    "src": "resources/js/pages/dashboard-4.init.js",
+    "isEntry": true,
+    "imports": [
+      "_raphael.min-BbIYla_3.js",
+      "_morris-BJDItP4Z.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/datatables.init.js": {
+    "file": "assets/datatables.init-B__p_lNI.js",
+    "name": "datatables.init",
+    "src": "resources/js/pages/datatables.init.js",
+    "isEntry": true,
+    "imports": [
+      "_dataTables.responsive-CTfasoYr.js",
+      "_jquery-DdWMSsjJ.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/dragula.init.js": {
+    "file": "assets/dragula.init-ChRGjdSX.js",
+    "name": "dragula.init",
+    "src": "resources/js/pages/dragula.init.js",
+    "isEntry": true,
+    "imports": [
+      "_dragula.min-rsYEjyIk.js",
+      "__commonjsHelpers-BosuxZz1.js",
+      "__commonjs-dynamic-modules-TDtrdbi3.js"
+    ]
+  },
+  "resources/js/pages/ecommerce-checkout.js": {
+    "file": "assets/ecommerce-checkout-BDrer40k.js",
+    "name": "ecommerce-checkout",
+    "src": "resources/js/pages/ecommerce-checkout.js",
+    "isEntry": true,
+    "imports": [
+      "_selectize-BryeZvXx.js",
+      "__commonjsHelpers-BosuxZz1.js",
+      "_jquery-DdWMSsjJ.js"
+    ]
+  },
+  "resources/js/pages/ecommerce-dashboard.init.js": {
+    "file": "assets/ecommerce-dashboard.init-YPb7FAU7.js",
+    "name": "ecommerce-dashboard.init",
+    "src": "resources/js/pages/ecommerce-dashboard.init.js",
+    "isEntry": true,
+    "imports": [
+      "_apexcharts.common-Cc8XBVXb.js",
+      "_jquery-jvectormap-world-mill-en-zZCUFlNu.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/flot.init.js": {
+    "file": "assets/flot.init-D68kqTaS.js",
+    "name": "flot.init",
+    "src": "resources/js/pages/flot.init.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/fontawesome.init.js": {
+    "file": "assets/fontawesome.init-BbJ5BGzl.js",
+    "name": "fontawesome.init",
+    "src": "resources/js/pages/fontawesome.init.js",
+    "isEntry": true
+  },
+  "resources/js/pages/foo-tables.init.js": {
+    "file": "assets/foo-tables.init-DC3QKC88.js",
+    "name": "foo-tables.init",
+    "src": "resources/js/pages/foo-tables.init.js",
+    "isEntry": true
+  },
+  "resources/js/pages/form-advanced.init.js": {
+    "file": "assets/form-advanced.init-CgaBcxgp.js",
+    "name": "form-advanced.init",
+    "src": "resources/js/pages/form-advanced.init.js",
+    "isEntry": true,
+    "imports": [
+      "_jquery-DdWMSsjJ.js",
+      "_selectize-BryeZvXx.js",
+      "__commonjsHelpers-BosuxZz1.js",
+      "__commonjs-dynamic-modules-TDtrdbi3.js"
+    ]
+  },
+  "resources/js/pages/form-fileuploads.init.js": {
+    "file": "assets/form-fileuploads.init-DswJuQnR.js",
+    "name": "form-fileuploads.init",
+    "src": "resources/js/pages/form-fileuploads.init.js",
+    "isEntry": true,
+    "imports": [
+      "_dropzone.min-C9ipFdOa.js",
+      "_dropify.min-8DgFiP_C.js",
+      "__commonjsHelpers-BosuxZz1.js",
+      "_jquery-DdWMSsjJ.js"
+    ]
+  },
+  "resources/js/pages/form-imagecrop.init.js": {
+    "file": "assets/form-imagecrop.init-DXR-Lb_N.js",
+    "name": "form-imagecrop.init",
+    "src": "resources/js/pages/form-imagecrop.init.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "_jquery-DdWMSsjJ.js"
+    ]
+  },
+  "resources/js/pages/form-masks.init.js": {
+    "file": "assets/form-masks.init-DP_Rcnx0.js",
+    "name": "form-masks.init",
+    "src": "resources/js/pages/form-masks.init.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "_jquery-DdWMSsjJ.js"
+    ]
+  },
+  "resources/js/pages/form-pickers.init.js": {
+    "file": "assets/form-pickers.init-B-yAKKQ9.js",
+    "name": "form-pickers.init",
+    "src": "resources/js/pages/form-pickers.init.js",
+    "isEntry": true,
+    "imports": [
+      "_flatpickr.min-CzbFJGZY.js",
+      "_jquery-DdWMSsjJ.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/form-quilljs.init.js": {
+    "file": "assets/form-quilljs.init-B1IPu8cp.js",
+    "name": "form-quilljs.init",
+    "src": "resources/js/pages/form-quilljs.init.js",
+    "isEntry": true,
+    "imports": [
+      "_quill.min-6KjZ1q7U.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/form-validation.init.js": {
+    "file": "assets/form-validation.init-Bzgqsdm1.js",
+    "name": "form-validation.init",
+    "src": "resources/js/pages/form-validation.init.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "_jquery-DdWMSsjJ.js"
+    ]
+  },
+  "resources/js/pages/form-wizard.init.js": {
+    "file": "assets/form-wizard.init-RzfMoYU-.js",
+    "name": "form-wizard.init",
+    "src": "resources/js/pages/form-wizard.init.js",
+    "isEntry": true,
+    "imports": [
+      "_bootstrap.min-EmNJFznO.js",
+      "__commonjsHelpers-BosuxZz1.js",
+      "_index-ArTk25LS.js",
+      "_index-WhmJkuoZ.js"
+    ]
+  },
+  "resources/js/pages/form-xeditable.init.js": {
+    "file": "assets/form-xeditable.init-DNsnpIX0.js",
+    "name": "form-xeditable.init",
+    "src": "resources/js/pages/form-xeditable.init.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "_index-ArTk25LS.js",
+      "_index-WhmJkuoZ.js"
+    ]
+  },
+  "resources/js/pages/gallery.init.js": {
+    "file": "assets/gallery.init-DQ9so6kA.js",
+    "name": "gallery.init",
+    "src": "resources/js/pages/gallery.init.js",
+    "isEntry": true,
+    "imports": [
+      "_jquery-DdWMSsjJ.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/google-maps.init.js": {
+    "file": "assets/google-maps.init-cq1lk8Rg.js",
+    "name": "google-maps.init",
+    "src": "resources/js/pages/google-maps.init.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/inbox.js": {
+    "file": "assets/inbox-DHuvBpTw.js",
+    "name": "inbox",
+    "src": "resources/js/pages/inbox.js",
+    "isEntry": true
+  },
+  "resources/js/pages/jquery.chat.js": {
+    "file": "assets/jquery.chat-B29yYYXI.js",
+    "name": "jquery.chat",
+    "src": "resources/js/pages/jquery.chat.js",
+    "isEntry": true
+  },
+  "resources/js/pages/jquery.todo.js": {
+    "file": "assets/jquery.todo-DTuFt0kb.js",
+    "name": "jquery.todo",
+    "src": "resources/js/pages/jquery.todo.js",
+    "isEntry": true
+  },
+  "resources/js/pages/jsgrid.init.js": {
+    "file": "assets/jsgrid.init-DTDrM8Pi.js",
+    "name": "jsgrid.init",
+    "src": "resources/js/pages/jsgrid.init.js",
+    "isEntry": true
+  },
+  "resources/js/pages/kanban.init.js": {
+    "file": "assets/kanban.init-EZQO-dEj.js",
+    "name": "kanban.init",
+    "src": "resources/js/pages/kanban.init.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/loading-btn.init.js": {
+    "file": "assets/loading-btn.init-Cd827b8r.js",
+    "name": "loading-btn.init",
+    "src": "resources/js/pages/loading-btn.init.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/mapeal-maps.init.js": {
+    "file": "assets/mapeal-maps.init-JCnARZen.js",
+    "name": "mapeal-maps.init",
+    "src": "resources/js/pages/mapeal-maps.init.js",
+    "isEntry": true,
+    "imports": [
+      "_raphael.min-BbIYla_3.js",
+      "_jquery-DdWMSsjJ.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/material-symbols.init.js": {
+    "file": "assets/material-symbols.init-D9j0gTT3.js",
+    "name": "material-symbols.init",
+    "src": "resources/js/pages/material-symbols.init.js",
+    "isEntry": true
+  },
+  "resources/js/pages/materialdesign.init.js": {
+    "file": "assets/materialdesign.init-CZ5ktgGg.js",
+    "name": "materialdesign.init",
+    "src": "resources/js/pages/materialdesign.init.js",
+    "isEntry": true
+  },
+  "resources/js/pages/morris.init.js": {
+    "file": "assets/morris.init-CnTMTWM0.js",
+    "name": "morris.init",
+    "src": "resources/js/pages/morris.init.js",
+    "isEntry": true,
+    "imports": [
+      "_raphael.min-BbIYla_3.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/nestable.init.js": {
+    "file": "assets/nestable.init-CfkP2bK-.js",
+    "name": "nestable.init",
+    "src": "resources/js/pages/nestable.init.js",
+    "isEntry": true
+  },
+  "resources/js/pages/peity.init.js": {
+    "file": "assets/peity.init-mtK7i1ev.js",
+    "name": "peity.init",
+    "src": "resources/js/pages/peity.init.js",
+    "isEntry": true,
+    "imports": [
+      "_jquery.peity.min-B5kns5m_.js"
+    ]
+  },
+  "resources/js/pages/project-details.init.js": {
+    "file": "assets/project-details.init-DCSFKXTK.js",
+    "name": "project-details.init",
+    "src": "resources/js/pages/project-details.init.js",
+    "isEntry": true,
+    "imports": [
+      "_Chart.bundle.min-CiRumIfa.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/range-sliders.init.js": {
+    "file": "assets/range-sliders.init-sxLAo7ow.js",
+    "name": "range-sliders.init",
+    "src": "resources/js/pages/range-sliders.init.js",
+    "isEntry": true,
+    "imports": [
+      "_jquery-DdWMSsjJ.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/responsive-table.init.js": {
+    "file": "assets/responsive-table.init-CTNiHXt4.js",
+    "name": "responsive-table.init",
+    "src": "resources/js/pages/responsive-table.init.js",
+    "isEntry": true
+  },
+  "resources/js/pages/sparkline.init.js": {
+    "file": "assets/sparkline.init-cpdfIvUW.js",
+    "name": "sparkline.init",
+    "src": "resources/js/pages/sparkline.init.js",
+    "isEntry": true,
+    "imports": [
+      "_jquery.sparkline.min-Cnj0wOvm.js"
+    ]
+  },
+  "resources/js/pages/sweet-alerts.init.js": {
+    "file": "assets/sweet-alerts.init-BQvjTXQv.js",
+    "name": "sweet-alerts.init",
+    "src": "resources/js/pages/sweet-alerts.init.js",
+    "isEntry": true,
+    "imports": [
+      "_sweetalert2.min-C-d5gjzI.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/tabledit.init.js": {
+    "file": "assets/tabledit.init-BS7GcJ_2.js",
+    "name": "tabledit.init",
+    "src": "resources/js/pages/tabledit.init.js",
+    "isEntry": true
+  },
+  "resources/js/pages/tablesaw.init.js": {
+    "file": "assets/tablesaw.init-B3RBloA5.js",
+    "name": "tablesaw.init",
+    "src": "resources/js/pages/tablesaw.init.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "_jquery-DdWMSsjJ.js"
+    ]
+  },
+  "resources/js/pages/task.init.js": {
+    "file": "assets/task.init-B1BMoNXd.js",
+    "name": "task.init",
+    "src": "resources/js/pages/task.init.js",
+    "isEntry": true,
+    "imports": [
+      "_dragula.min-rsYEjyIk.js",
+      "_quill.min-6KjZ1q7U.js",
+      "__commonjsHelpers-BosuxZz1.js",
+      "__commonjs-dynamic-modules-TDtrdbi3.js"
+    ]
+  },
+  "resources/js/pages/tickets.js": {
+    "file": "assets/tickets-CiXIIRWp.js",
+    "name": "tickets",
+    "src": "resources/js/pages/tickets.js",
+    "isEntry": true,
+    "imports": [
+      "_dataTables.bootstrap5.min-DOu0eajj.js",
+      "_jquery-DdWMSsjJ.js",
+      "__commonjsHelpers-BosuxZz1.js",
+      "_dataTables.responsive-CTfasoYr.js"
+    ]
+  },
+  "resources/js/pages/toastr.init.js": {
+    "file": "assets/toastr.init-DcEn0U2d.js",
+    "name": "toastr.init",
+    "src": "resources/js/pages/toastr.init.js",
+    "isEntry": true
+  },
+  "resources/js/pages/tour.init.js": {
+    "file": "assets/tour.init-0t-Iai57.js",
+    "name": "tour.init",
+    "src": "resources/js/pages/tour.init.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/js/pages/vector-maps.init.js": {
+    "file": "assets/vector-maps.init-DR-T25_R.js",
+    "name": "vector-maps.init",
+    "src": "resources/js/pages/vector-maps.init.js",
+    "isEntry": true,
+    "imports": [
+      "_jquery-jvectormap-world-mill-en-zZCUFlNu.js"
+    ]
+  },
+  "resources/js/pages/widgets-peity.init.js": {
+    "file": "assets/widgets-peity.init-CsOMEZea.js",
+    "name": "widgets-peity.init",
+    "src": "resources/js/pages/widgets-peity.init.js",
+    "isEntry": true,
+    "imports": [
+      "_jquery.knob.min-CbSo-t57.js"
+    ]
+  },
+  "resources/js/pages/widgets.init.js": {
+    "file": "assets/widgets.init-DRmz6Tud.js",
+    "name": "widgets.init",
+    "src": "resources/js/pages/widgets.init.js",
+    "isEntry": true,
+    "imports": [
+      "_jquery.peity.min-B5kns5m_.js",
+      "_jquery.knob.min-CbSo-t57.js",
+      "_jquery.sparkline.min-Cnj0wOvm.js",
+      "_sweetalert2.min-C-d5gjzI.js",
+      "_jquery.todo-DFHMq2_1.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/scss/config/creative/app.scss": {
+    "file": "assets/app-DeNMm3mt.css",
+    "src": "resources/scss/config/creative/app.scss",
+    "isEntry": true
+  },
+  "resources/scss/config/creative/bootstrap.scss": {
+    "file": "assets/bootstrap-BHLin2eZ.css",
+    "src": "resources/scss/config/default/bootstrap.scss",
+    "isEntry": true
+  },
+  "resources/scss/config/default/app.scss": {
+    "file": "assets/app-BKqhOVEr.css",
+    "src": "resources/scss/config/default/app.scss",
+    "isEntry": true
+  },
+  "resources/scss/config/default/bootstrap.scss": {
+    "file": "assets/bootstrap-BHLin2eZ.css",
+    "src": "resources/scss/config/default/bootstrap.scss",
+    "isEntry": true
+  },
+  "resources/scss/config/material/app.scss": {
+    "file": "assets/app-CCXJAZbj.css",
+    "src": "resources/scss/config/material/app.scss",
+    "isEntry": true
+  },
+  "resources/scss/config/material/bootstrap.scss": {
+    "file": "assets/bootstrap-CK1bClqo.css",
+    "src": "resources/scss/config/material/bootstrap.scss",
+    "isEntry": true
+  },
+  "resources/scss/config/modern/app.scss": {
+    "file": "assets/app-DeNMm3mt.css",
+    "src": "resources/scss/config/creative/app.scss",
+    "isEntry": true
+  },
+  "resources/scss/config/modern/bootstrap.scss": {
+    "file": "assets/bootstrap-BHLin2eZ.css",
+    "src": "resources/scss/config/default/bootstrap.scss",
+    "isEntry": true
+  },
+  "resources/scss/config/purple/app.scss": {
+    "file": "assets/app-BZO6Zycb.css",
+    "src": "resources/scss/config/purple/app.scss",
+    "isEntry": true
+  },
+  "resources/scss/config/purple/bootstrap.scss": {
+    "file": "assets/bootstrap-pggqIZLm.css",
+    "src": "resources/scss/config/purple/bootstrap.scss",
+    "isEntry": true
+  },
+  "resources/scss/config/saas/app.scss": {
+    "file": "assets/app-CFZyFLcR.css",
+    "src": "resources/scss/config/saas/app.scss",
+    "isEntry": true
+  },
+  "resources/scss/config/saas/bootstrap.scss": {
+    "file": "assets/bootstrap-BJ5eoS3M.css",
+    "src": "resources/scss/config/saas/bootstrap.scss",
+    "isEntry": true
+  },
+  "resources/scss/icons.scss": {
+    "file": "assets/icons-D56aSHex.css",
+    "src": "resources/scss/icons.scss",
+    "isEntry": true
+  },
+  "resources/scss/landing/app.scss": {
+    "file": "assets/app-DnNhDzHe.css",
+    "src": "resources/scss/landing/app.scss",
+    "isEntry": true
+  }
+}

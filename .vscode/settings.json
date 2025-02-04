@@ -1,0 +1,8 @@
+{
+    "atlascode.bitbucket.enabled": true,
+    "atlascode.bitbucket.preferredRemotes": [
+        "upstream",
+        "origin",
+        "master"
+    ]
+}
