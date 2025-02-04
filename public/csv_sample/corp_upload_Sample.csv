@@ -1,0 +1,5 @@
+Pan,ContactPerson,Designation,Email,Mobile,BankZone,TypeAssetClass,CompanyType,Sector,Financialyear,BankExposure
+BINPR9911D,Ravi,Haryana,ravi@gmail.com,9555060021,East,2,1,1,1,10000
+BINPR9911D,Shankar,Haryana,ravi1@gmail.com,9555060022,North,1,2,2,2,10000
+BINPR9911D,Tushar,Haryana,ravi2@gmail.com,9555060023,South,1,1,3,3,10000
+BINPR9911D,Romesh,Haryana,ravi3@gmail.com,9555060024,West,2,2,4,1,10000
