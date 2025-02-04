@@ -120,9 +120,19 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
     $(document).ready(function () {
-        // Check if DataTable is already initialized on the table
-        if (!$.fn.dataTable.isDataTable('#branchTable')) {
-            // Initialize DataTable only if it isn't already initialized
+    // Function to check if column counts match
+    function checkColumnCount() {
+        var headerColumnCount = $('#branchTable thead tr th').length;
+        var bodyColumnCount = $('#branchTable tbody tr:first td').length;
+        
+        return headerColumnCount === bodyColumnCount;
+    }
+
+    // Check if DataTable is already initialized
+    if (!$.fn.dataTable.isDataTable('#branchTable')) {
+        // Verify that the column count matches
+        if (checkColumnCount()) {
+            // Initialize DataTable only if the column count is correct
             $('#branchTable').DataTable({
                 dom: 'Bfrtip',
                 buttons: ['copy', 'csv', 'excel', 'pdf', 'print'],
@@ -132,8 +142,13 @@
                 ordering: true,
                 info: true
             });
+        } else {
+            // Log error and do not initialize DataTable if column count mismatch
+            console.error("DataTable Error: Column count mismatch between header and rows.");
         }
-    });
+    }
+});
+
 </script>
 
 @endsection

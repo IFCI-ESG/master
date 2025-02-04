@@ -101,7 +101,7 @@
                                         <td>
                                             <input type="date" id="valid_from" name="valid_from"
                                                 class="form-control form-control-sm text-right" style="width:50%"
-                                                required onchange="setMinValidToDate()" />
+                                                required onchange="setMinValidToDate(); enableValidToDate()" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -112,7 +112,7 @@
                                         <td>
                                             <input type="date" id="valid_to" name="valid_to"
                                                 class="form-control form-control-sm text-right" style="width:50%"
-                                                required />
+                                                required disabled />
                                         </td>
                                     </tr>
                                     <tr>
@@ -226,10 +226,10 @@
         </button>
     </div>
 </div>
-                
 
 
-                    
+
+
                 </div>
             </form>
         </div>
@@ -386,26 +386,31 @@
         var validFromDate = document.getElementById("valid_from").value;
         var validToDateInput = document.getElementById("valid_to");
 
-        // Set the min date of the "Valid To" field as the "Valid From" date
+      
         validToDateInput.min = validFromDate;
     }
 </script>
 <script>
+  function setMinValidToDate() {
+        var validFromDate = document.getElementById("valid_from").value;
+        var validToDateInput = document.getElementById("valid_to");
 
-    function validateForm() {
-        const checkboxes = document.querySelectorAll('input[name="services[]"]');
-        let isChecked = false;
-        checkboxes.forEach((checkbox) => {
-            if (checkbox.checked) {
-                isChecked = true;
-            }
-        });
-        if (!isChecked) {
-            alert("Please select at least one purpose.");
-            return false;
-        }
-        return true;
+        validToDateInput.min = validFromDate;
     }
+
+    function enableValidToDate() {
+        var validFromDate = document.getElementById('valid_from').value;
+        var validToField = document.getElementById('valid_to');
+
+     
+        if (validFromDate) {
+            validToField.disabled = false; 
+        } else {
+            validToField.disabled = true;  
+            validToField.value = '';  
+        }
+    }
+
 </script>
 @section('script')
 @include('partials.js.prevent_multiple_submit')

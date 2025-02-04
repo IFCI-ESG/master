@@ -91,6 +91,7 @@
                                                 required />
                                         </td>
                                     </tr>
+                            
                                     <tr>
                                         <th class="text-center" style="font-size: 0.9rem"> 4. </th>
                                         <th style="font-size: 0.9rem">
@@ -220,10 +221,11 @@
                         <form action="{{ route('admin.new_admin.submit') }}" id="final_submit" role="form" method="post"
                             class='fin_prevent_multiple_submit' files=true enctype='multipart/form-data' accept-charset="utf-8">
                             @csrf
-                            <button type="submit" id="finalsubmit" @if($bank_details->status=='S') disabled @endif
-                                class="btn btn-primary btn-sm form-control form-control-sm">
-                                <em class="fas fa-save"></em> Submit
-                            </button>
+@if($bank_details->status != 'S')
+    <button type="submit" id="finalsubmit" class="btn btn-primary btn-sm form-control form-control-sm">
+        <em class="fas fa-save"></em> Submit
+    </button>
+@endif
                             <input type="hidden" name="user_id" value="{{ $bank_details->id }}">
                         </form>
                     </div>
